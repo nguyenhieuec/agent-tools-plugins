@@ -9,7 +9,8 @@ license: MIT
 Split a job into work AI can do now, work AI should draft for a person to approve, and work that needs a person, before you hire.
 
 The tools come from the `hire` MCP server, bundled with the `sales-hiring` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_sales-hiring_hire__<tool>`, for example `mcp__plugin_sales-hiring_hire__split_role`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_sales-hiring_hire__<tool>`, for example `mcp__plugin_sales-hiring_hire__split_role`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `hire` is connected.
 
 ## When to use

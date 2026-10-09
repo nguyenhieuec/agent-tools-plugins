@@ -9,7 +9,8 @@ license: MIT
 Validate an EU VAT number on VIES, look up an LEI, or search a company register. Ask "is ES A28015865 a valid VAT number?", "what is the LEI of Siemens AG?" or "find the registered company called Equinor in Norway".
 
 The tools come from the `eu-business` MCP server, bundled with the `office` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_office_eu-business__<tool>`, for example `mcp__plugin_office_eu-business__company_from_domain`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_office_eu-business__<tool>`, for example `mcp__plugin_office_eu-business__company_from_domain`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `eu-business` is connected.
 
 ## When to use

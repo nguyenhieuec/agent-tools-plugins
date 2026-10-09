@@ -9,7 +9,8 @@ license: MIT
 Ask what an online store sells, what it charges and what changed since the last time anyone looked.
 
 The tools come from the `store-prices` MCP server, bundled with the `commerce` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_commerce_store-prices__<tool>`, for example `mcp__plugin_commerce_store-prices__check_store_prices`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_commerce_store-prices__<tool>`, for example `mcp__plugin_commerce_store-prices__check_store_prices`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `store-prices` is connected.
 
 ## When to use

@@ -9,7 +9,8 @@ license: MIT
 Audit a website for technical and on-page SEO problems. Ask "audit example.com", "what SEO problems does https://example.com/pricing have?" or "which pages on my site have missing titles or duplicate descriptions?".
 
 The tools come from the `seo-audit` MCP server, bundled with the `web-email` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_web-email_seo-audit__<tool>`, for example `mcp__plugin_web-email_seo-audit__audit_site`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_web-email_seo-audit__<tool>`, for example `mcp__plugin_web-email_seo-audit__audit_site`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `seo-audit` is connected.
 
 ## When to use

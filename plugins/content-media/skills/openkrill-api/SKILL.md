@@ -9,7 +9,8 @@ license: MIT
 YouTube transcripts, open jobs from careers pages, app store reviews and X posts. Use when the user shares a YouTube link to summarize or quote, a careers page or Greenhouse, Lever or Ashby board, a Google Play or App Store app, or an x.com post link.
 
 The tools come from the `openkrill-api` MCP server, bundled with the `content-media` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_content-media_openkrill-api__<tool>`, for example `mcp__plugin_content-media_openkrill-api__get_transcript`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_content-media_openkrill-api__<tool>`, for example `mcp__plugin_content-media_openkrill-api__get_transcript`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `openkrill-api` is connected.
 
 ## Examples

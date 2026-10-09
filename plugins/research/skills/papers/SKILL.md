@@ -9,7 +9,8 @@ license: MIT
 Find research papers on a topic, search arXiv preprints, and get a paper's abstract and free full-text link from its DOI, PubMed id or arXiv id.
 
 The tools come from the `papers` MCP server, bundled with the `research` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_research_papers__<tool>`, for example `mcp__plugin_research_papers__search_papers`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_research_papers__<tool>`, for example `mcp__plugin_research_papers__search_papers`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `papers` is connected.
 
 ## When to use

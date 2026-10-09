@@ -9,7 +9,8 @@ license: MIT
 Ask what happened in AI coding agents (Claude Code, Codex, Cursor, Copilot, Gemini CLI, Cline, Aider and others) and what people say about a product.
 
 The tools come from the `industry-pulse` MCP server, bundled with the `dev-security` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_dev-security_industry-pulse__<tool>`, for example `mcp__plugin_dev-security_industry-pulse__latest_events`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_dev-security_industry-pulse__<tool>`, for example `mcp__plugin_dev-security_industry-pulse__latest_events`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `industry-pulse` is connected.
 
 ## When to use

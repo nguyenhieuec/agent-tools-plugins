@@ -9,7 +9,8 @@ license: MIT
 Lane Planner is a planning tool for people with many interests and limited hours. Ask "I have 10 hours a week for an iOS app, a Swift book, Figma, guitar and Japanese: plan my week" or "here is last week's list with what I ticked: plan the next one".
 
 The tools come from the `lane-planner` MCP server, bundled with the `office` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_office_lane-planner__<tool>`, for example `mcp__plugin_office_lane-planner__plan_lanes`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_office_lane-planner__<tool>`, for example `mcp__plugin_office_lane-planner__plan_lanes`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `lane-planner` is connected.
 
 ## When to use

@@ -9,7 +9,8 @@ license: MIT
 Calculate technical indicators over a price series: SMA, EMA, RSI, MACD, Bollinger Bands, ATR, stochastic oscillator and VWAP. Each answer gives the latest value and a short series of recent values, with the source and the date of the last price.
 
 The tools come from the `market-indicators` MCP server, bundled with the `markets` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_markets_market-indicators__<tool>`, for example `mcp__plugin_markets_market-indicators__compute_indicators`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_markets_market-indicators__<tool>`, for example `mcp__plugin_markets_market-indicators__compute_indicators`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `market-indicators` is connected.
 
 ## When to use

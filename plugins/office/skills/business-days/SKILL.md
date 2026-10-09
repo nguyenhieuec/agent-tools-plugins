@@ -9,7 +9,8 @@ license: MIT
 Count workdays, office days and PTO days between two dates, add business days for an SLA due date, or list bank holidays and school breaks. Ask "how many working days are there between 14 July and 18 August in Germany?", "what date is 37 business days after 11 August in England?", "is Monday a bank holiday in Bavaria?" or "what are the school holidays in Bavaria?".
 
 The tools come from the `business-days` MCP server, bundled with the `office` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_office_business-days__<tool>`, for example `mcp__plugin_office_business-days__count_business_days`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_office_business-days__<tool>`, for example `mcp__plugin_office_business-days__count_business_days`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `business-days` is connected.
 
 ## When to use

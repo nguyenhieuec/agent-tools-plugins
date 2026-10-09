@@ -9,7 +9,8 @@ license: MIT
 Find an HS code, HTS code or customs code, and read the customs duty or import tax. Ask "what is the tariff code for a ceramic flower pot in the UK?", "what is the US duty on HTS 8507.60.00?" or "what duty applies to code 6914100000 from Vietnam in the UK?".
 
 The tools come from the `tariffs` MCP server, bundled with the `commerce` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_commerce_tariffs__<tool>`, for example `mcp__plugin_commerce_tariffs__find_tariff_codes`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_commerce_tariffs__<tool>`, for example `mcp__plugin_commerce_tariffs__find_tariff_codes`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `tariffs` is connected.
 
 ## When to use

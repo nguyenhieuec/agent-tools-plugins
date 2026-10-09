@@ -9,7 +9,8 @@ license: MIT
 See how competitors position a product before you write ads. Ad Angle Map reads the public product feeds of Shopify stores you name and groups what they offer: price range, discount depth, bundles, subscriptions, and the persuasion angles in the product-page copy. It also groups ads you paste in, checks whether people discuss an angle on Hacker News or Stack Exchange, and picks the ad type for a buyer's awareness stage.
 
 The tools come from the `ad-angle` MCP server, bundled with the `commerce` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_commerce_ad-angle__<tool>`, for example `mcp__plugin_commerce_ad-angle__map_store_offers`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_commerce_ad-angle__<tool>`, for example `mcp__plugin_commerce_ad-angle__map_store_offers`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `ad-angle` is connected.
 
 ## When to use

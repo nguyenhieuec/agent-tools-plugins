@@ -9,7 +9,8 @@ license: MIT
 Paste a bibliography or a single reference and find out whether the papers are real. Ask "are these references real?", "check my bibliography", "verify this citation", "is this DOI correct?" or "has this paper been retracted?".
 
 The tools come from the `citations` MCP server, bundled with the `research` plugin.
-Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_research_citations__<tool>`, for example `mcp__plugin_research_citations__check_references`; if one is not loaded yet, find it with ToolSearch first.
+In Claude Code they are named `mcp__plugin_research_citations__<tool>`, for example `mcp__plugin_research_citations__check_references`.
+If the tool is not loaded yet, load it with ToolSearch, then call it in your next step as a normal tool call, the same way you call any other tool. It is not a command line program: Bash, curl and scripts cannot reach it.
 If the tools are missing, run `/mcp` and check that `citations` is connected.
 
 ## When to use
