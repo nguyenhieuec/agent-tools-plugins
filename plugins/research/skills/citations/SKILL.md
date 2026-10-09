@@ -27,8 +27,8 @@ If the tools are missing, run `/mcp` and check that `citations` is connected.
 - "Has the paper with DOI 10.1016/S0140-6736(97)11096-0 been retracted?"
 - "Verify this citation: Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural Computation, 9(8), 1735-1780." calls `check_references`.
 - "Are these references real? 1) LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521, 436-444. 2) 10.48550/arXiv.1706.03762 3) Smith, J., & Alvarez, M. (2021). Recursive gradient folding in sparse quantum transformers. Journal of Imaginary Results, 12(3), 45-67." calls `check_references`.
-- "Is this DOI correct? LeCun, Bengio & Hinton (2015), Deep learning, Nature 521, 436-444, doi:10.1038/nature14540" calls `check_references`.
-- "Has this paper been retracted? doi 10.1016/S0140-6736(97)11096-0" calls `check_references`.
+- "Is this DOI correct? LeCun, Bengio & Hinton (2015), Deep learning, Nature 521, 436-444, doi:10.1038/nature14540." calls `check_references`.
+- "Has this paper been retracted? doi 10.1016/S0140-6736(97)11096-0." calls `check_references`.
 - "Check my bibliography: Hochreiter, S., & Schmidhuber, J. (2005). Long short-term memory. Neural Computation, 9(8), 1735-1780." calls `check_references`.
 
 ## When not to use

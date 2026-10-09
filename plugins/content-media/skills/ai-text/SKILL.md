@@ -28,11 +28,11 @@ If the tools are missing, run `/mcp` and check that `ai-text` is connected.
 - "Which parts of this email sound like AI wrote them?"
 - "Check my blog post draft for filler and stock phrases"
 - "Does this cover letter lean on clichés? Show where."
-- "Which parts of this sound like AI? 'Great question! The meeting moved to Thursday at 3pm. I hope this helps! Let me know if you'd like me to expand on any section.'" calls `check_ai_writing`.
-- "Check this for filler: 'The new bakery opened on Main Street — it is small — and the bread is good — especially the rye — though the queue is long — and the coffee is average.'" calls `check_ai_writing`.
-- "Does this read like AI? 'Our platform helps teams to leverage a robust, seamless and innovative toolkit. It fosters collaboration, boosts productivity, and enhances well-being across the whole organization.'" calls `check_ai_writing`.
-- "Find the stock phrases in this: 'It's important to note that results may vary. In conclusion, the future looks bright for local bakeries.'" calls `check_ai_writing`.
-- "Is the rhythm of this too uniform? 'The bakery opens early on weekdays for the morning rush. Most customers come in for the seeded rye loaf. A small team works the ovens before dawn each day. The owner checks every batch before it goes on sale. Prices stay the same through the whole winter season. Regulars know the staff by name after a few visits.'" calls `check_ai_writing`.
+- "Which parts of this sound like AI? 'Great question! The meeting moved to Thursday at 3pm. I hope this helps! Let me know if you'd like me to expand on any section.'." calls `check_ai_writing`.
+- "Check this for filler: 'The new bakery opened on Main Street — it is small — and the bread is good — especially the rye — though the queue is long — and the coffee is average.'." calls `check_ai_writing`.
+- "Does this read like AI? 'Our platform helps teams to leverage a robust, seamless and innovative toolkit. It fosters collaboration, boosts productivity, and enhances well-being across the whole organization.'." calls `check_ai_writing`.
+- "Find the stock phrases in this: 'It's important to note that results may vary. In conclusion, the future looks bright for local bakeries.'." calls `check_ai_writing`.
+- "Is the rhythm of this too uniform? 'The bakery opens early on weekdays for the morning rush. Most customers come in for the seeded rye loaf. A small team works the ovens before dawn each day. The owner checks every batch before it goes on sale. Prices stay the same through the whole winter season. Regulars know the staff by name after a few visits.'." calls `check_ai_writing`.
 
 ## When not to use
 

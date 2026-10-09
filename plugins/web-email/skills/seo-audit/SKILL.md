@@ -39,9 +39,7 @@ If the tools are missing, run `/mcp` and check that `seo-audit` is connected.
 - "Is example.com ready to be named in AI search? It is a local plumbing business." calls `local_ai_readiness`.
 - "Does example.com publish llms.txt, llms-full.txt and an AI instructions page, and does the home page link to them?" calls `check_ai_instructions`.
 - "Google's AI Overview for 'best form builder' cites https://a.example.com/best and https://b.example.com/guide. How does https://mine.example.com/forms compare?" calls `compare_citations`.
-- "Will this page be cited, and how do I fix it? Here is the HTML:
-
-<!doctype html><html lang='en'><head><title>Pricing</title></head><body><div class='hero'><img src='/hero.png'><p>Plans for every team.</p></div><div>Starter is 9 dollars a month. Pro is 29 dollars a month. Cancel any time.</div></body></html>" calls `score_page_citation`.
+- "Will this page be cited, and how do I fix it? Here is the HTML." calls `score_page_citation`.
 
 ## When not to use
 

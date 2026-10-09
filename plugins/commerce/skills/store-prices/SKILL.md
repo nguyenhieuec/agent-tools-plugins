@@ -26,9 +26,9 @@ If the tools are missing, run `/mcp` and check that `store-prices` is connected.
 - "Track competitor prices on allbirds.com"
 - "What did gymshark.com change this week?"
 - "How has the price of the Allbirds Tree Runner moved?"
-- "Track competitor prices on allbirds.com" calls `check_store_prices`.
+- "Track competitor prices on allbirds.com." calls `check_store_prices`.
 - "What did gymshark.com change since yesterday?" calls `check_store_prices`.
-- "Compare product prices on mysneakerstore.com with allbirds.com and find products with at least 15% price gap" calls `compare_store_prices`.
+- "Compare product prices on mysneakerstore.com with allbirds.com and find products with at least 15% price gap." calls `compare_store_prices`.
 - "How has the price of the Allbirds Tree Runner changed over time?" calls `get_product_price_history`.
 - "Which products at colourpop.com are sold out right now?" calls `check_store_prices`.
 

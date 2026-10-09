@@ -37,7 +37,7 @@ If the tools are missing, run `/mcp` and check that `site-check` is connected.
 - "Review the landing page https://example.com/ for conversion."
 - "Is https://www.allbirds.com/products/mens-tree-runners set up for search? Check the title, description and product data." calls `product_page_seo`.
 - "Review my landing page https://example.com/ for conversion. What should I fix first?" calls `landing_page_check`.
-- "Will AI assistants cite this page, and what should I fix? Check https://www.allbirds.com/pages/our-materials-tree" calls `ai_readiness_check`.
+- "Will AI assistants cite this page, and what should I fix? Check https://www.allbirds.com/pages/our-materials-tree." calls `ai_readiness_check`.
 - "Are any pages of allbirds.com broken? Check the sitemap." calls `link_sample_check`.
 - "I own openkrill.app. Is anything on it exposed to the internet?" calls `exposure_check`.
 

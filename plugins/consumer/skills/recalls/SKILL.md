@@ -27,7 +27,7 @@ If the tools are missing, run `/mcp` and check that `recalls` is connected.
 - "Is the Fisher-Price Rock 'n Play sleeper recalled?"
 - "Any dog food recalls this week?"
 - "Does my 2018 Honda Accord have any recalls?" calls `check_vehicle_recalls`.
-- "Decode this VIN: 1HGCM82633A004352" calls `decode_vin`.
+- "Decode this VIN: 1HGCM82633A004352." calls `decode_vin`.
 - "Is the Joolz Aer2 car seat adapter recalled?" calls `search_product_recalls`.
 - "Was there a recall on this infant formula? It is Nara Organics Whole Milk Organic Infant Formula." calls `search_food_drug_recalls`.
 - "Any dog food recalls this week?" calls `search_pet_food_recalls`.

@@ -27,12 +27,7 @@ If the tools are missing, run `/mcp` and check that `shop-duty` is connected.
 - "Find candidate tariff codes for these 15 products"
 - "I ship 6 order lines to Germany under IOSS: 3 different cotton t-shirts at 25 euros each and 3 different ceramic mugs at 15 euros each, all made in China, 120 euros in total. What EU duty applies?" calls `eu_duty_estimate`.
 - "Does the EUR 3 duty apply to a parcel worth 200 euros sent by post from China?" calls `eu_duty_estimate`.
-- "Here is my Shopify inventory export. Which products have no HS code or country of origin?
-
-Handle,Title,Option1 Name,Option1 Value,SKU,HS Code,COO,Location,On hand
-wool-beanie,Merino Wool Beanie,Title,Default Title,WB-01,6505.00,CN,Main warehouse,40
-wool-socks,Merino Wool Socks,Title,Default Title,WS-01,,PT,Main warehouse,25
-trail-cap,Trail Cap,Title,Default Title,TC-01,6505.00,,Main warehouse,12" calls `customs_data_gap_check`.
+- "Here is my Shopify inventory export. Which products have no HS code or country of origin?" calls `customs_data_gap_check`.
 - "Find candidate HS codes for these products: wool beanie, ceramic coffee mug, stainless steel water bottle." calls `bulk_hs_candidates`.
 - "What will duty and VAT cost on a 80 pound item with 12 pounds shipping, tariff code 6109100010, going to the UK from China?" calls `landed_cost_estimate`.
 

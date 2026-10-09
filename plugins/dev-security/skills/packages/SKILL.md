@@ -29,7 +29,7 @@ If the tools are missing, run `/mcp` and check that `packages` is connected.
 - "Is the npm package left-pad still maintained?" calls `check_package`.
 - "What license is the Python package requests under?" calls `check_package`.
 - "Is there a safer alternative to request?" calls `check_package`.
-- "Check my package.json for known vulnerabilities: {'name':'demo','dependencies':{'lodash':'4.17.15','left-pad':'^1.3.0'},'devDependencies':{'typescript':'~5.4.0'}}" calls `check_package_json`.
+- "Check my package.json for known vulnerabilities." calls `check_package_json`.
 
 ## When not to use
 

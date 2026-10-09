@@ -28,9 +28,9 @@ If the tools are missing, run `/mcp` and check that `emailpld` is connected.
 - "Join this event file to my recipient CSV and return the CSV plus unmatched events."
 - "Turn this Customer.io NDJSON export into a per-recipient report and CSV." calls `engagement_report`.
 - "Join these events to my recipient CSV and drop events with no match." calls `engagement_report`.
-- "Treat Apple privacy opens as impressions only, and use a 7 day window." calls `engagement_report`.
-- "A delivered event then a bounce should not count as delivered." calls `engagement_report`.
-- "This SendGrid event export needs the same recipient report." calls `engagement_report`.
+- "Make the recipient report for these events. Treat Apple privacy opens as impressions only, and use a 7 day window." calls `engagement_report`.
+- "Make the recipient report for these events. A delivered event then a bounce should not count as delivered." calls `engagement_report`.
+- "This SendGrid event export needs a per-recipient report." calls `engagement_report`.
 
 ## When not to use
 

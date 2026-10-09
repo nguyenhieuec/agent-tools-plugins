@@ -26,7 +26,6 @@ If the tools are missing, run `/mcp` and check that `names` is connected.
 - "Is acme.com available?"
 - "Check if the startup name Lumenly is taken"
 - "Find an available .com for my bakery name, Rise & Crumb"
-- "Is google.com available?" calls `check_domain_availability`.
 - "Check if the startup name zzqxnowherewidgets123 is taken." calls `check_domain_availability`.
 - "Find an available .com for my bakery name: Rise & Crumb, Crumb Theory or zzqxnowherebakery123." calls `check_domain_availability`.
 - "Are openai.ai and wikipedia.org registered, and when do they expire?" calls `check_domain_availability`.

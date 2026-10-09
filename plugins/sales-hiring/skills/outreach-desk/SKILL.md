@@ -26,10 +26,10 @@ If the tools are missing, run `/mcp` and check that `outreach-desk` is connected
 - "Score this inbound recruiter pitch against my criteria and check for spam signals."
 - "Show my sender scoreboard to see which recruiting firms deliver high-yield opportunities."
 - "Initialize my outreach desk for a Staff Distributed Systems Engineer at $210,000 base, 100% remote, with TypeScript and Go." calls `set_criteria`.
-- "Score this recruiter message from Stripe about a Staff Distributed Systems role offering $220k-$250k base remote." calls `score_message`.
-- "Show my sender scoreboard to see which recruitment agencies provide the best opportunities." calls `get_scoreboard`.
-- "Draft a polite decline for evaluation ev_12345678 and include the candidate feedback card." calls `draft_response`.
-- "Delete all stored records and evaluations for domain faststaffing.biz from my desk." calls `purge_data`.
+- "Set up my outreach desk for a Staff Distributed Systems Engineer at a $210,000 base floor, 100% remote, with TypeScript and Go, then score this recruiter message from stripe.com: 'Hi, I saw your open source work on the hyper-kv GitHub repo. We are hiring a Staff Distributed Systems Engineer at Stripe. Base salary is $220k-$250k, 100% remote.'." calls `score_message`.
+- "Set up my outreach desk for a Staff Distributed Systems Engineer at a $210,000 base floor, 100% remote, with TypeScript and Go. Score these two recruiter messages, then show my sender scoreboard to see which recruiters bring the best opportunities." calls `get_scoreboard`.
+- "Set up my outreach desk for a Staff Distributed Systems Engineer at a $210,000 base floor, 100% remote, with TypeScript and Go. Score this recruiter message from faststaffing.biz, then draft a polite decline for it and include the candidate feedback card: 'Dear Candidate, I loved your work at [Current Company], you would be an awesome rockstar ninja for our client onsite in Dallas for a Java developer.'." calls `draft_response`.
+- "Set up my outreach desk for a Staff Distributed Systems Engineer at a $210,000 base floor, 100% remote, with TypeScript and Go. Score this recruiter message from faststaffing.biz, then delete all stored records and evaluations for faststaffing.biz from my desk: 'Dear Candidate, I loved your work at [Current Company], you would be an awesome rockstar ninja for our client onsite in Dallas for a Java developer.'." calls `purge_data`.
 
 ## When not to use
 

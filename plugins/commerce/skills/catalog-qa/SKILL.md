@@ -25,31 +25,11 @@ If the tools are missing, run `/mcp` and check that `catalog-qa` is connected.
 - "Will this Shopify product CSV import cleanly?"
 - "What would Google Merchant Center reject in my catalog?"
 - "Which of my products have no image alt text?"
-- "I edited my Shopify product CSV by hand. Will it import cleanly? Here is the file:
-
-Title,URL handle,Description,Vendor,SKU,Price,Barcode,Product image URL,Image position,Image alt text,Status
-Merino Wool Beanie,wool-beanie,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WB-01,24.00,0123456789012,https://cdn.example.com/beanie.jpg,1,Grey merino beanie,active
-Merino Wool Socks,wool-socks,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WS-01,12.50 USD,12345,https://cdn.example.com/socks.jpg,1,,active
-Trail Cap,trail-cap,,North Knit,TC-01,18.00,,https://cdn.example.com/cap.jpg,1,,active" calls `csv_import_preflight`.
-- "What would Google Merchant Center reject in this product export?
-
-Title,URL handle,Description,Vendor,SKU,Price,Barcode,Product image URL,Image position,Image alt text,Status
-Merino Wool Beanie,wool-beanie,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WB-01,24.00,0123456789012,https://cdn.example.com/beanie.jpg,1,Grey merino beanie,active
-Merino Wool Socks,wool-socks,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WS-01,12.50 USD,12345,https://cdn.example.com/socks.jpg,1,,active
-Trail Cap,trail-cap,,North Knit,TC-01,18.00,,https://cdn.example.com/cap.jpg,1,,active" calls `merchant_feed_check`.
+- "I edited my Shopify product CSV by hand. Will it import cleanly? Here is the file." calls `csv_import_preflight`.
+- "What would Google Merchant Center reject in this product export?" calls `merchant_feed_check`.
 - "Check the catalog of allbirds.com for feed problems. It is a Shopify store." calls `merchant_feed_check`.
-- "Which of my products have no image alt text, and are any descriptions copied from another product? Here is my product CSV:
-
-Title,URL handle,Description,Vendor,SKU,Price,Barcode,Product image URL,Image position,Image alt text,Status
-Merino Wool Beanie,wool-beanie,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WB-01,24.00,0123456789012,https://cdn.example.com/beanie.jpg,1,Grey merino beanie,active
-Merino Wool Socks,wool-socks,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WS-01,12.50 USD,12345,https://cdn.example.com/socks.jpg,1,,active
-Trail Cap,trail-cap,,North Knit,TC-01,18.00,,https://cdn.example.com/cap.jpg,1,,active" calls `listing_text_audit`.
-- "Write me a sheet that fills in the missing alt text in this product CSV using the product title.
-
-Title,URL handle,Description,Vendor,SKU,Price,Barcode,Product image URL,Image position,Image alt text,Status
-Merino Wool Beanie,wool-beanie,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WB-01,24.00,0123456789012,https://cdn.example.com/beanie.jpg,1,Grey merino beanie,active
-Merino Wool Socks,wool-socks,'Soft merino wool knit that keeps you warm on cold mornings, folds into a pocket and washes by hand.',North Knit,WS-01,12.50 USD,12345,https://cdn.example.com/socks.jpg,1,,active
-Trail Cap,trail-cap,,North Knit,TC-01,18.00,,https://cdn.example.com/cap.jpg,1,,active" calls `listing_fix_sheet`.
+- "Which of my products have no image alt text, and are any descriptions copied from another product? Here is my product CSV." calls `listing_text_audit`.
+- "Write me a sheet that fills in the missing alt text in this product CSV using the product title." calls `listing_fix_sheet`.
 
 ## When not to use
 

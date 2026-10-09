@@ -27,9 +27,9 @@ If the tools are missing, run `/mcp` and check that `send-out` is connected.
 - "Draft an email to the project team about status updates"
 - "Make a calendar event for Sprint Review next Monday at 10am"
 - "Create a WhatsApp link with a customer support follow-up message"
-- "Draft an email to alex@example.com with subject 'Project Milestone' saying 'Phase 1 is complete and ready for review.'" calls `draft_email`.
+- "Draft an email to alex@example.com with subject 'Project Milestone' saying 'Phase 1 is complete and ready for review.'." calls `draft_email`.
 - "Create a calendar event for 'Product Launch' on 2026-11-15T14:00 with duration 60 minutes in Europe/London." calls `create_calendar_event`.
-- "Create a WhatsApp link for phone '+1 (555) 234-5678' with message 'Your appointment is confirmed for Tuesday at 3pm.'" calls `create_whatsapp_link`.
+- "Create a WhatsApp link for phone '+1 (555) 234-5678' with message 'Your appointment is confirmed for Tuesday at 3pm.'." calls `create_whatsapp_link`.
 - "Export a research note titled 'Edge Compute Patterns' to my 'TechNotes' Obsidian vault with tags ['architecture', 'edge']." calls `create_obsidian_note`.
 - "Create an X post: 'Excited to ship our new open source CLI today! Check it out at https://example.com' with hashtag #devtools." calls `create_x_post`.
 

@@ -35,9 +35,9 @@ If the tools are missing, run `/mcp` and check that `postkit` is connected.
 - "Make 4 TikTok slideshows to test this app idea before I code it."
 - "Write posts for X, Bluesky and LinkedIn about the launch of our new open-source CLI, branch-tidy. It deletes merged git branches in one command, works on macOS, Linux and Windows, and is MIT licensed." calls `draft_posts`.
 - "Write a 25-second video script for TikTok and Instagram Reels about our new budgeting app, Penny Jar. It sorts card spending into envelopes by itself and warns you 3 days before a bill is due." calls `draft_video_script`.
-- "Adapt this post for a Japanese audience: 'Our app is a home run for busy parents.'" calls `localize_post`.
+- "Adapt this post for a Japanese audience: 'Our app is a home run for busy parents.'." calls `localize_post`.
 - "Make 4 TikTok slideshows to test this idea before I code: a shared grocery list for roommates." calls `draft_tiktok_slides`.
-- "Make a launch video from our product page, https://tools.openkrill.app/app-submit" calls `launch_video`.
+- "Make a launch video from our product page, https://tools.openkrill.app/app-submit." calls `launch_video`.
 
 ## When not to use
 

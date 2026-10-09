@@ -29,8 +29,8 @@ If the tools are missing, run `/mcp` and check that `transcript-kit` is connecte
 - "Transcribe this recording and give me SRT captions"
 - "Find the best 60 second clips in my talk"
 - "Translate my captions to Spanish with a dub script"
-- "This is a talk our team recorded and published, so we have the rights to transcribe it. Transcribe it and give me SRT captions: https://tools.openkrill.app/samples/clipper-talk.mp4" calls `transcribe_media`.
-- "This LibriVox recording is in the public domain, so I have the rights to transcribe it. Please transcribe it in English: https://archive.org/download/short_poetry_001_librivox/because_I_could_not_stop_for_death_dickinson_64kb.mp3" calls `transcribe_media`.
+- "This is a talk our team recorded and published, so we have the rights to transcribe it. Transcribe it and give me SRT captions: https://tools.openkrill.app/samples/clipper-talk.mp4." calls `transcribe_media`.
+- "This LibriVox recording is in the public domain, so I have the rights to transcribe it. Please transcribe it in English: https://archive.org/download/short_poetry_001_librivox/because_I_could_not_stop_for_death_dickinson_64kb.mp3." calls `transcribe_media`.
 - "Which of my transcripts mention backups, and at what time?" calls `search_transcripts`.
 - "Translate the captions of that talk into Spanish and write me a dub script." calls `translate_subtitles`.
 - "Find me the best 2 clips of 10 to 20 seconds in that talk, with a hook line for each." calls `suggest_clips`.

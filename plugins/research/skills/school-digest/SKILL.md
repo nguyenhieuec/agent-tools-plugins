@@ -26,11 +26,11 @@ If the tools are missing, run `/mcp` and check that `school-digest` is connected
 - "Make today's school page from this Canvas snapshot."
 - "Compare these two school snapshots and list what changed."
 - "Add these 3 summary lines to the school page for River."
-- "Make today's school page from this Canvas snapshot for 2026-10-08." calls `make_school_digest`.
-- "Compare this Canvas snapshot with yesterday's and list what changed." calls `make_school_digest`.
-- "Add this Infinite Campus grade snapshot and these school notice emails to the page." calls `make_school_digest`.
-- "Here are 3 summary lines for River Sample. Put them on the school page." calls `make_school_digest`.
-- "What is due in the next 7 days, and what is missing, in this Canvas snapshot?" calls `make_school_digest`.
+- "Make today's school page for 2026-10-08 from this Canvas snapshot, taken 2026-10-08T12:00:00Z." calls `make_school_digest`.
+- "Compare today's Canvas snapshot with yesterday's and list what changed. Today is 2026-10-08, taken 2026-10-08T12:00:00Z." calls `make_school_digest`.
+- "Make the school page for 2026-10-08 from this Canvas snapshot, taken 2026-10-08T12:00:00Z, and add this Infinite Campus grade snapshot and this school notice email." calls `make_school_digest`.
+- "Make the school page for 2026-10-08 from this Canvas snapshot, taken 2026-10-08T12:00:00Z, and put these 3 summary lines for River Sample on it: Math grade is B+. Reading log is missing. Essay draft is due Saturday." calls `make_school_digest`.
+- "What is due in the next 7 days, and what is missing, in this Canvas snapshot from 2026-10-08, taken 2026-10-08T12:00:00Z?" calls `make_school_digest`.
 
 ## When not to use
 
