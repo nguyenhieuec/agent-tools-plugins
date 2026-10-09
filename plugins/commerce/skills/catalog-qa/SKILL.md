@@ -8,8 +8,8 @@ license: MIT
 
 Check an online store's product catalog before you import it or send it to a shopping feed.
 
-The tools come from the `catalog-qa` MCP server at `https://catalogqa.openkrill.app/mcp`, bundled with the `commerce` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_commerce_catalog-qa__<tool>`, for example `mcp__plugin_commerce_catalog-qa__csv_import_preflight`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `catalog-qa` MCP server, bundled with the `commerce` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_commerce_catalog-qa__<tool>`, for example `mcp__plugin_commerce_catalog-qa__csv_import_preflight`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `catalog-qa` is connected.
 
 ## When to use

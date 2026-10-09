@@ -8,8 +8,8 @@ license: MIT
 
 Find freely licensed video you can reuse, with a download link, the licence and ready-to-paste attribution, and get the official steps to export videos you uploaded yourself.
 
-The tools come from the `videograb` MCP server at `https://videograb.openkrill.app/mcp`, bundled with the `content-media` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_content-media_videograb__<tool>`, for example `mcp__plugin_content-media_videograb__search_free_videos`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `videograb` MCP server, bundled with the `content-media` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_content-media_videograb__<tool>`, for example `mcp__plugin_content-media_videograb__search_free_videos`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `videograb` is connected.
 
 ## When to use

@@ -8,8 +8,8 @@ license: MIT
 
 Look up official economic and demographic figures for a country, and see the IMF's projections, from the World Bank and the IMF.
 
-The tools come from the `countrystats` MCP server at `https://countrystats.openkrill.app/mcp`, bundled with the `research` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_research_countrystats__<tool>`, for example `mcp__plugin_research_countrystats__get_country_indicator`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `countrystats` MCP server, bundled with the `research` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_research_countrystats__<tool>`, for example `mcp__plugin_research_countrystats__get_country_indicator`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `countrystats` is connected.
 
 ## When to use

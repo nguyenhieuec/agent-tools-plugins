@@ -8,8 +8,8 @@ license: MIT
 
 Check whether a car, a baby product, a food or a medicine has been recalled in the United States, using the official recall databases.
 
-The tools come from the `recalls` MCP server at `https://recalls.openkrill.app/mcp`, bundled with the `consumer` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_consumer_recalls__<tool>`, for example `mcp__plugin_consumer_recalls__check_vehicle_recalls`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `recalls` MCP server, bundled with the `consumer` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_consumer_recalls__<tool>`, for example `mcp__plugin_consumer_recalls__check_vehicle_recalls`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `recalls` is connected.
 
 ## When to use

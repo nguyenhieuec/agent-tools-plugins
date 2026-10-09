@@ -8,8 +8,8 @@ license: MIT
 
 Shows a candlestick price chart for a public ticker, with volume and the indicators you name, plus a short plain-language read of what is on the chart.
 
-The tools come from the `trade-chart` MCP server at `https://chart.openkrill.app/mcp`, bundled with the `markets` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_markets_trade-chart__<tool>`, for example `mcp__plugin_markets_trade-chart__chart`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `trade-chart` MCP server, bundled with the `markets` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_markets_trade-chart__<tool>`, for example `mcp__plugin_markets_trade-chart__chart`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `trade-chart` is connected.
 
 ## When to use

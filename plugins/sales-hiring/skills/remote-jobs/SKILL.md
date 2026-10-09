@@ -8,8 +8,8 @@ license: MIT
 
 Remote Jobs by Country finds remote jobs a person can actually be hired for from where they live. Ask "remote software jobs I can get from Vietnam", "remote support jobs open to the Philippines" or "crypto jobs that hire in Brazil".
 
-The tools come from the `remote-jobs` MCP server at `https://remotejobs.openkrill.app/mcp`, bundled with the `sales-hiring` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_sales-hiring_remote-jobs__<tool>`, for example `mcp__plugin_sales-hiring_remote-jobs__find_remote_jobs`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `remote-jobs` MCP server, bundled with the `sales-hiring` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_sales-hiring_remote-jobs__<tool>`, for example `mcp__plugin_sales-hiring_remote-jobs__find_remote_jobs`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `remote-jobs` is connected.
 
 ## When to use

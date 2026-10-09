@@ -8,8 +8,8 @@ license: MIT
 
 Read a CFR or eCFR section, or search US federal regulations and the Federal Register. Ask "what does 21 CFR 11.10 say?", "which regulations mention respirator fit testing?" or "what has the FDA proposed on food dyes this year?".
 
-The tools come from the `rules` MCP server at `https://rules.openkrill.app/mcp`, bundled with the `research` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_research_rules__<tool>`, for example `mcp__plugin_research_rules__get_cfr_section`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `rules` MCP server, bundled with the `research` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_research_rules__<tool>`, for example `mcp__plugin_research_rules__get_cfr_section`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `rules` is connected.
 
 ## When to use

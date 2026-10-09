@@ -8,8 +8,8 @@ license: MIT
 
 Get the US federal tax numbers right, with the IRS document each one comes from.
 
-The tools come from the `tax` MCP server at `https://tax.openkrill.app/mcp`, bundled with the `office` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_office_tax__<tool>`, for example `mcp__plugin_office_tax__get_tax_parameters`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `tax` MCP server, bundled with the `office` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_office_tax__<tool>`, for example `mcp__plugin_office_tax__get_tax_parameters`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `tax` is connected.
 
 ## When to use

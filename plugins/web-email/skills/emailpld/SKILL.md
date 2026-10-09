@@ -8,8 +8,8 @@ license: MIT
 
 Email Engagement Report turns a raw email event export into a per-recipient engagement report. Paste a Customer.io reporting webhook file as NDJSON or JSON. SendGrid and Mailgun event objects are accepted when their field names are present.
 
-The tools come from the `emailpld` MCP server at `https://emailpld.openkrill.app/mcp`, bundled with the `web-email` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_web-email_emailpld__<tool>`, for example `mcp__plugin_web-email_emailpld__engagement_report`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `emailpld` MCP server, bundled with the `web-email` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_web-email_emailpld__<tool>`, for example `mcp__plugin_web-email_emailpld__engagement_report`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `emailpld` is connected.
 
 ## When to use

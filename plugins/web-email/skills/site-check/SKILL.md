@@ -8,8 +8,8 @@ license: MIT
 
 Check one page for an SEO audit, Open Graph tags, a 301 redirect and broken links. Ask "can AI crawlers read example.com?", "is this product page set up for search?", "will AI assistants cite this page?", "can AI shopping agents read this store?", "are any pages in this store's sitemap broken?" or "what would make this landing page convert better?".
 
-The tools come from the `site-check` MCP server at `https://sitecheck.openkrill.app/mcp`, bundled with the `web-email` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_web-email_site-check__<tool>`, for example `mcp__plugin_web-email_site-check__check_ai_crawler_access`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `site-check` MCP server, bundled with the `web-email` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_web-email_site-check__<tool>`, for example `mcp__plugin_web-email_site-check__check_ai_crawler_access`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `site-check` is connected.
 
 ## When to use

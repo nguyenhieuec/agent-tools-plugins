@@ -8,8 +8,8 @@ license: MIT
 
 Turn chaotic recruiter inboxes into a private quality scoreboard that scores incoming messages on relevance, specificity, cadence, and spam signals without reading your mailbox.
 
-The tools come from the `outreach-desk` MCP server at `https://outreachdesk.openkrill.app/mcp`, bundled with the `sales-hiring` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_sales-hiring_outreach-desk__<tool>`, for example `mcp__plugin_sales-hiring_outreach-desk__set_criteria`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `outreach-desk` MCP server, bundled with the `sales-hiring` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_sales-hiring_outreach-desk__<tool>`, for example `mcp__plugin_sales-hiring_outreach-desk__set_criteria`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `outreach-desk` is connected.
 
 ## When to use

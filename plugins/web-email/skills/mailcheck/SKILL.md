@@ -8,8 +8,8 @@ license: MIT
 
 Check how a domain is set up for email, whether Gmail and Outlook are likely to accept its mail, and who it is registered with, from public DNS, free blocklists and registry data.
 
-The tools come from the `mailcheck` MCP server at `https://mailcheck.openkrill.app/mcp`, bundled with the `web-email` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_web-email_mailcheck__<tool>`, for example `mcp__plugin_web-email_mailcheck__launch_score`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `mailcheck` MCP server, bundled with the `web-email` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_web-email_mailcheck__<tool>`, for example `mcp__plugin_web-email_mailcheck__launch_score`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `mailcheck` is connected.
 
 ## When to use

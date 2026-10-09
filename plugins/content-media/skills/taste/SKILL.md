@@ -8,8 +8,8 @@ license: MIT
 
 Turn the reference images you collect into a written design taste that your assistant can follow when it makes slides, interfaces or images for you.
 
-The tools come from the `taste` MCP server at `https://taste.openkrill.app/mcp`, bundled with the `content-media` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_content-media_taste__<tool>`, for example `mcp__plugin_content-media_taste__add_refs`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `taste` MCP server, bundled with the `content-media` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_content-media_taste__<tool>`, for example `mcp__plugin_content-media_taste__add_refs`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `taste` is connected.
 
 ## When to use

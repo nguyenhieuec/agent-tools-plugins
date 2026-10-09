@@ -8,8 +8,8 @@ license: MIT
 
 Triage security vulnerabilities: by CVE id (how severe it is, whether it is being exploited, how likely exploitation is) or for a whole dependency list (which 3 packages to upgrade first, and to what version).
 
-The tools come from the `cve` MCP server at `https://cve.openkrill.app/mcp`, bundled with the `dev-security` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_dev-security_cve__<tool>`, for example `mcp__plugin_dev-security_cve__check_cve`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `cve` MCP server, bundled with the `dev-security` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_dev-security_cve__<tool>`, for example `mcp__plugin_dev-security_cve__check_cve`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `cve` is connected.
 
 ## When to use

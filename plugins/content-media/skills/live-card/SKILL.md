@@ -8,8 +8,8 @@ license: MIT
 
 Turn a cover and a short animation, both supplied as HTML, into an Apple Live Photo plus an MP4 and a GIF.
 
-The tools come from the `live-card` MCP server at `https://livecard.openkrill.app/mcp`, bundled with the `content-media` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_content-media_live-card__<tool>`, for example `mcp__plugin_content-media_live-card__render_live_card`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `live-card` MCP server, bundled with the `content-media` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_content-media_live-card__<tool>`, for example `mcp__plugin_content-media_live-card__render_live_card`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `live-card` is connected.
 
 ## When to use

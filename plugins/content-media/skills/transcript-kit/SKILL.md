@@ -8,8 +8,8 @@ license: MIT
 
 Turn a recording you own into a timestamped transcript with SRT and VTT captions, search what you have transcribed, find the best short clips in a talk, and translate the captions with a dub script.
 
-The tools come from the `transcript-kit` MCP server at `https://transcript.openkrill.app/mcp`, bundled with the `content-media` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_content-media_transcript-kit__<tool>`, for example `mcp__plugin_content-media_transcript-kit__transcribe_media`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `transcript-kit` MCP server, bundled with the `content-media` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_content-media_transcript-kit__<tool>`, for example `mcp__plugin_content-media_transcript-kit__transcribe_media`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `transcript-kit` is connected.
 
 ## When to use

@@ -8,8 +8,8 @@ license: MIT
 
 Look up a packaged food by its barcode, search for products, compare them side by side and check a product's listed allergens.
 
-The tools come from the `food` MCP server at `https://food.openkrill.app/mcp`, bundled with the `consumer` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_consumer_food__<tool>`, for example `mcp__plugin_consumer_food__lookup_barcode`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `food` MCP server, bundled with the `consumer` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_consumer_food__<tool>`, for example `mcp__plugin_consumer_food__lookup_barcode`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `food` is connected.
 
 ## When to use

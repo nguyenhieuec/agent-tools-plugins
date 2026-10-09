@@ -8,8 +8,8 @@ license: MIT
 
 Check what the UK and US governments currently advise about a country, and see live delays and weather at an airport.
 
-The tools come from the `travel` MCP server at `https://travel.openkrill.app/mcp`, bundled with the `consumer` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_consumer_travel__<tool>`, for example `mcp__plugin_consumer_travel__get_travel_advice`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `travel` MCP server, bundled with the `consumer` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_consumer_travel__<tool>`, for example `mcp__plugin_consumer_travel__get_travel_advice`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `travel` is connected.
 
 ## When to use

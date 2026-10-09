@@ -8,8 +8,8 @@ license: MIT
 
 Check a US car's public record before you buy or while you own it: decode a VIN, see its recalls, crash test ratings and owner complaints, and compare fuel economy.
 
-The tools come from the `cars` MCP server at `https://cars.openkrill.app/mcp`, bundled with the `consumer` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_consumer_cars__<tool>`, for example `mcp__plugin_consumer_cars__decode_vin`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `cars` MCP server, bundled with the `consumer` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_consumer_cars__<tool>`, for example `mcp__plugin_consumer_cars__decode_vin`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `cars` is connected.
 
 ## When to use

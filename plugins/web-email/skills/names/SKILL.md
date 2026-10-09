@@ -8,8 +8,8 @@ license: MIT
 
 Check whether the domain for a startup, product or business name is already registered before you fall in love with it.
 
-The tools come from the `names` MCP server at `https://names.openkrill.app/mcp`, bundled with the `web-email` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_web-email_names__<tool>`, for example `mcp__plugin_web-email_names__check_domain_availability`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `names` MCP server, bundled with the `web-email` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_web-email_names__<tool>`, for example `mcp__plugin_web-email_names__check_domain_availability`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `names` is connected.
 
 ## When to use

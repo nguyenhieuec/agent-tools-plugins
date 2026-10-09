@@ -8,8 +8,8 @@ license: MIT
 
 Check the facts a developer asks for again and again: when a software version reaches end of life, what an open-source license is, whether a web feature works in a browser and what an RFC says about itself.
 
-The tools come from the `dev-facts` MCP server at `https://devfacts.openkrill.app/mcp`, bundled with the `dev-security` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_dev-security_dev-facts__<tool>`, for example `mcp__plugin_dev-security_dev-facts__get_eol_status`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `dev-facts` MCP server, bundled with the `dev-security` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_dev-security_dev-facts__<tool>`, for example `mcp__plugin_dev-security_dev-facts__get_eol_status`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `dev-facts` is connected.
 
 ## When to use

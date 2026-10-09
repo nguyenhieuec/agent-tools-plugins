@@ -8,8 +8,8 @@ license: MIT
 
 Ask about open jobs at the companies you care about and get the current list straight from their public careers boards.
 
-The tools come from the `company-jobs` MCP server at `https://jobs.openkrill.app/mcp`, bundled with the `sales-hiring` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_sales-hiring_company-jobs__<tool>`, for example `mcp__plugin_sales-hiring_company-jobs__find_company_jobs`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `company-jobs` MCP server, bundled with the `sales-hiring` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_sales-hiring_company-jobs__<tool>`, for example `mcp__plugin_sales-hiring_company-jobs__find_company_jobs`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `company-jobs` is connected.
 
 ## When to use

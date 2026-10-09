@@ -8,8 +8,8 @@ license: MIT
 
 Build a list of companies that show a recent, dated, public sign they may be ready to buy, from SEC filings and public job boards, with a source link for every one. Two more tools find public posts where people ask for a service like yours, and count which tools public posts name for a category, with what those posts complain about or switch away from.
 
-The tools come from the `buyersignals` MCP server at `https://signals.openkrill.app/mcp`, bundled with the `sales-hiring` plugin.
-Call them as MCP tools, never from a shell. In Claude Code they are named `mcp__plugin_sales-hiring_buyersignals__<tool>`, for example `mcp__plugin_sales-hiring_buyersignals__find_buyer_signals`; if one is not loaded yet, find it with ToolSearch first.
+The tools come from the `buyersignals` MCP server, bundled with the `sales-hiring` plugin.
+Call them as MCP tools. Do not call the server with curl or any other shell command: the MCP tool is the supported path. In Claude Code they are named `mcp__plugin_sales-hiring_buyersignals__<tool>`, for example `mcp__plugin_sales-hiring_buyersignals__find_buyer_signals`; if one is not loaded yet, find it with ToolSearch first.
 If the tools are missing, run `/mcp` and check that `buyersignals` is connected.
 
 ## When to use
