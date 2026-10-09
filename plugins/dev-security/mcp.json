@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "packages": {
+      "url": "https://packages.openkrill.app/mcp"
+    },
+    "cve": {
+      "url": "https://cve.openkrill.app/mcp"
+    },
+    "dev-facts": {
+      "url": "https://devfacts.openkrill.app/mcp"
+    },
+    "industry-pulse": {
+      "url": "https://pulse.openkrill.app/mcp"
+    }
+  }
+}

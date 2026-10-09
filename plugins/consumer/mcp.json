@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "recalls": {
+      "url": "https://recalls.openkrill.app/mcp"
+    },
+    "cars": {
+      "url": "https://cars.openkrill.app/mcp"
+    },
+    "food": {
+      "url": "https://food.openkrill.app/mcp"
+    },
+    "travel": {
+      "url": "https://travel.openkrill.app/mcp"
+    }
+  }
+}

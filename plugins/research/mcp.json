@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "papers": {
+      "url": "https://papers.openkrill.app/mcp"
+    },
+    "citations": {
+      "url": "https://citations.openkrill.app/mcp"
+    },
+    "rules": {
+      "url": "https://rules.openkrill.app/mcp"
+    },
+    "countrystats": {
+      "url": "https://countrystats.openkrill.app/mcp"
+    },
+    "school-digest": {
+      "url": "https://schooldigest.openkrill.app/mcp"
+    }
+  }
+}

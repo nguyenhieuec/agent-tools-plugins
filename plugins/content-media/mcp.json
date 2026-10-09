@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "postkit": {
+      "url": "https://postkit.openkrill.app/mcp"
+    },
+    "ai-text": {
+      "url": "https://aitext.openkrill.app/mcp"
+    },
+    "transcript-kit": {
+      "url": "https://transcript.openkrill.app/mcp"
+    },
+    "videograb": {
+      "url": "https://videograb.openkrill.app/mcp"
+    },
+    "live-card": {
+      "url": "https://livecard.openkrill.app/mcp"
+    },
+    "taste": {
+      "url": "https://taste.openkrill.app/mcp"
+    },
+    "openkrill-api": {
+      "url": "https://api.openkrill.app/mcp"
+    }
+  }
+}

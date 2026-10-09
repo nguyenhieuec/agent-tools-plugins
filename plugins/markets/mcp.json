@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "market-indicators": {
+      "url": "https://indicators.openkrill.app/mcp"
+    },
+    "trade-chart": {
+      "url": "https://chart.openkrill.app/mcp"
+    },
+    "lpcheck": {
+      "url": "https://lpcheck.openkrill.app/mcp"
+    }
+  }
+}

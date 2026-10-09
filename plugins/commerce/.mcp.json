@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "store-prices": {
+      "type": "http",
+      "url": "https://stores.openkrill.app/mcp"
+    },
+    "catalog-qa": {
+      "type": "http",
+      "url": "https://catalogqa.openkrill.app/mcp"
+    },
+    "tariffs": {
+      "type": "http",
+      "url": "https://tariffs.openkrill.app/mcp"
+    },
+    "shop-duty": {
+      "type": "http",
+      "url": "https://shopduty.openkrill.app/mcp"
+    },
+    "ad-angle": {
+      "type": "http",
+      "url": "https://adangle.openkrill.app/mcp"
+    }
+  }
+}

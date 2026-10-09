@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "office",
+  "displayName": "Office and Admin Tools",
+  "description": "Business days and holidays, US tax figures, EU VAT and company registries, document files, ready-to-send links and weekly lane plans.",
+  "author": {
+    "name": "Agent Tools",
+    "email": "support@openkrill.app",
+    "url": "https://tools.openkrill.app/"
+  },
+  "homepage": "https://tools.openkrill.app/",
+  "repository": "https://github.com/nguyenhieuec/agent-tools-plugins",
+  "license": "MIT",
+  "keywords": [
+    "business-days",
+    "holidays",
+    "tax",
+    "vat",
+    "calendar",
+    "productivity"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

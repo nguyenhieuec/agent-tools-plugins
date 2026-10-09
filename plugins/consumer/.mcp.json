@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "recalls": {
+      "type": "http",
+      "url": "https://recalls.openkrill.app/mcp"
+    },
+    "cars": {
+      "type": "http",
+      "url": "https://cars.openkrill.app/mcp"
+    },
+    "food": {
+      "type": "http",
+      "url": "https://food.openkrill.app/mcp"
+    },
+    "travel": {
+      "type": "http",
+      "url": "https://travel.openkrill.app/mcp"
+    }
+  }
+}

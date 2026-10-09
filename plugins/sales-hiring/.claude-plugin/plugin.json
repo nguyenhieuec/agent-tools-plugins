@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "sales-hiring",
+  "displayName": "Sales, Jobs and Hiring",
+  "description": "Buyer signals, an inbound pitch scoreboard, open jobs at named companies, remote jobs by country, and a hire-or-automate split.",
+  "author": {
+    "name": "Agent Tools",
+    "email": "support@openkrill.app",
+    "url": "https://tools.openkrill.app/"
+  },
+  "homepage": "https://tools.openkrill.app/",
+  "repository": "https://github.com/nguyenhieuec/agent-tools-plugins",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "lead-generation",
+    "jobs",
+    "recruiting",
+    "hiring"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

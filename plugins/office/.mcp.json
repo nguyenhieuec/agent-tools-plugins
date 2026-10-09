@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "business-days": {
+      "type": "http",
+      "url": "https://businessdays.openkrill.app/mcp"
+    },
+    "tax": {
+      "type": "http",
+      "url": "https://tax.openkrill.app/mcp"
+    },
+    "eu-business": {
+      "type": "http",
+      "url": "https://eubusiness.openkrill.app/mcp"
+    },
+    "docs": {
+      "type": "http",
+      "url": "https://docs.openkrill.app/mcp"
+    },
+    "send-out": {
+      "type": "http",
+      "url": "https://sendout.openkrill.app/mcp"
+    },
+    "lane-planner": {
+      "type": "http",
+      "url": "https://lanes.openkrill.app/mcp"
+    }
+  }
+}

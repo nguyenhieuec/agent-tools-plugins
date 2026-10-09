@@ -1,0 +1,22 @@
+{
+  "name": "dev-security",
+  "displayName": "Developer and Security Checks",
+  "description": "Package health, CVE triage, software end-of-life and licence facts, and AI coding agent news.",
+  "author": {
+    "name": "Agent Tools",
+    "email": "support@openkrill.app",
+    "url": "https://tools.openkrill.app/"
+  },
+  "homepage": "https://tools.openkrill.app/",
+  "repository": "https://github.com/nguyenhieuec/agent-tools-plugins",
+  "license": "MIT",
+  "keywords": [
+    "cve",
+    "vulnerabilities",
+    "npm",
+    "pypi",
+    "licenses",
+    "end-of-life",
+    "developer-tools"
+  ]
+}

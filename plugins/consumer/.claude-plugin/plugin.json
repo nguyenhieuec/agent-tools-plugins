@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "consumer",
+  "displayName": "Consumer Checks",
+  "description": "US recalls, car reports by VIN, food facts by barcode, and travel advice with live airport status.",
+  "author": {
+    "name": "Agent Tools",
+    "email": "support@openkrill.app",
+    "url": "https://tools.openkrill.app/"
+  },
+  "homepage": "https://tools.openkrill.app/",
+  "repository": "https://github.com/nguyenhieuec/agent-tools-plugins",
+  "license": "MIT",
+  "keywords": [
+    "recalls",
+    "vin",
+    "food",
+    "allergens",
+    "travel"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

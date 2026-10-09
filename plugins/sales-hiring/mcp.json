@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "buyersignals": {
+      "url": "https://signals.openkrill.app/mcp"
+    },
+    "outreach-desk": {
+      "url": "https://outreachdesk.openkrill.app/mcp"
+    },
+    "company-jobs": {
+      "url": "https://jobs.openkrill.app/mcp"
+    },
+    "remote-jobs": {
+      "url": "https://remotejobs.openkrill.app/mcp"
+    },
+    "hire": {
+      "url": "https://hire.openkrill.app/mcp"
+    }
+  }
+}

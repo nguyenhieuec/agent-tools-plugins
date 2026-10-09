@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "market-indicators": {
+      "type": "http",
+      "url": "https://indicators.openkrill.app/mcp"
+    },
+    "trade-chart": {
+      "type": "http",
+      "url": "https://chart.openkrill.app/mcp"
+    },
+    "lpcheck": {
+      "type": "http",
+      "url": "https://lpcheck.openkrill.app/mcp"
+    }
+  }
+}

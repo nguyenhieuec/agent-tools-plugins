@@ -1,0 +1,20 @@
+{
+  "name": "markets",
+  "displayName": "Market Tools",
+  "description": "Technical indicators over a price series, candlestick charts for a ticker, and liquidity pool fee and volume checks.",
+  "author": {
+    "name": "Agent Tools",
+    "email": "support@openkrill.app",
+    "url": "https://tools.openkrill.app/"
+  },
+  "homepage": "https://tools.openkrill.app/",
+  "repository": "https://github.com/nguyenhieuec/agent-tools-plugins",
+  "license": "MIT",
+  "keywords": [
+    "trading",
+    "indicators",
+    "charts",
+    "defi",
+    "liquidity-pools"
+  ]
+}

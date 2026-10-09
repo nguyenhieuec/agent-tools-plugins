@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "site-check": {
+      "type": "http",
+      "url": "https://sitecheck.openkrill.app/mcp"
+    },
+    "seo-audit": {
+      "type": "http",
+      "url": "https://seoaudit.openkrill.app/mcp"
+    },
+    "mailcheck": {
+      "type": "http",
+      "url": "https://mailcheck.openkrill.app/mcp"
+    },
+    "names": {
+      "type": "http",
+      "url": "https://names.openkrill.app/mcp"
+    },
+    "emailpld": {
+      "type": "http",
+      "url": "https://emailpld.openkrill.app/mcp"
+    }
+  }
+}

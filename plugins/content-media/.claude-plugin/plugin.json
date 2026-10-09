@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "content-media",
+  "displayName": "Content and Media Tools",
+  "description": "Post and video script drafts, AI-writing checks, transcripts, free video, Live Photos, design taste, plus YouTube transcripts, app reviews and X posts.",
+  "author": {
+    "name": "Agent Tools",
+    "email": "support@openkrill.app",
+    "url": "https://tools.openkrill.app/"
+  },
+  "homepage": "https://tools.openkrill.app/",
+  "repository": "https://github.com/nguyenhieuec/agent-tools-plugins",
+  "license": "MIT",
+  "keywords": [
+    "content",
+    "social-media",
+    "transcripts",
+    "youtube",
+    "video",
+    "copywriting"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

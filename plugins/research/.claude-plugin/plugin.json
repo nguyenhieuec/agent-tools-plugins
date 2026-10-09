@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "research",
+  "displayName": "Research and Public Data",
+  "description": "Find papers, check references and DOIs, read US federal regulations, compare country statistics, and make a school digest.",
+  "author": {
+    "name": "Agent Tools",
+    "email": "support@openkrill.app",
+    "url": "https://tools.openkrill.app/"
+  },
+  "homepage": "https://tools.openkrill.app/",
+  "repository": "https://github.com/nguyenhieuec/agent-tools-plugins",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "papers",
+    "citations",
+    "regulations",
+    "statistics"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}
