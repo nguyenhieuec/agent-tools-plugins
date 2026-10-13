@@ -48,6 +48,7 @@ If the tools are missing, run `/mcp` and check that `countrystats` is connected.
 ## How to answer
 
 Use these tools to answer questions about a country's official statistics from the World Bank and the IMF. Call get_country_indicator for one country and one series, compare_countries to compare or rank two to six countries on one series, and get_imf_forecast for the IMF's projection of growth, inflation or debt. Always state the year of each value and the source with its as_of date: the latest World Bank value is usually one to two years old and can be from a different year for each country, so say so when same_year is false. Group names such as Nordic or G7 must be turned into a list of countries before calling compare_countries, for up to six countries. A status of no_data means the source has no figure for that country and year, and unavailable means the source could not be read: say so and do not estimate a number. IMF values for the current and later years are projections that change with each edition, not facts. These tools do not provide live market data, exchange rates, stock or currency advice, weather or news; decline those requests.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

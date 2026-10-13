@@ -41,12 +41,13 @@ If the tools are missing, run `/mcp` and check that `market-indicators` is conne
 
 ## Tools
 
-- `compute_indicators`: Compute indicators. Calculates indicators from prices the user gives.
-- `get_indicators`: Get indicators. Calculates indicators for a currency pair.
+- `compute_indicators`: Calculate indicators from your own candles. Calculates indicators from prices the user gives.
+- `get_indicators`: Calculate indicators for a currency pair (ECB). Calculates indicators for a currency pair.
 
 ## How to answer
 
 Use these tools to calculate technical indicators. compute_indicators works on candles the user provides (oldest first, a numeric close and optional time, open, high, low and volume) and makes no outside lookup; get_indicators reads ECB daily euro reference rates for a currency pair and supports sma, ema, rsi, macd and bollinger. Use compute_indicators for anything that is not a currency pair, and for atr, stochastic and vwap, which need high, low and volume. If the user wants an indicator for a stock or crypto asset, ask them to provide the prices. Report the numbers, the settings used (params), the source and the asOf date. Read skipped and error.hint when something could not be calculated and change the call instead of repeating it. This is informational only and not financial advice. Never say an indicator means buy, sell, overbought, oversold, bullish or bearish for the user, never predict prices and never suggest trades. If asked whether to buy or sell, say the plugin only calculates values. Do not claim the ECB publishes these indicators: it publishes only the rates.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

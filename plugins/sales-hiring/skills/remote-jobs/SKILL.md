@@ -46,6 +46,7 @@ If the tools are missing, run `/mcp` and check that `remote-jobs` is connected.
 ## How to answer
 
 Use find_remote_jobs when the user wants remote jobs they can be hired for from a country. Pass the country they will work from; ask for it when it is unknown, never guess it. Set family, type, niche and keywords only from the user's words. Show each job's title, company, verdict and reason, and its applyUrl. Say that open means the post includes the country or hires from anywhere, and unclear means the post names no limit, so the user should check with the employer before applying. When a job has via, credit that source by name with its link. The verdict reads the post's own words and is not a promise of being hired. Do not apply for the user.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

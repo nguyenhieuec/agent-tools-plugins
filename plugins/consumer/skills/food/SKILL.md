@@ -50,6 +50,7 @@ If the tools are missing, run `/mcp` and check that `food` is connected.
 ## How to answer
 
 Use these tools for questions about packaged food products identified by barcode or name. Call lookup_barcode for one product, search_products to find barcodes by name or brand, compare_products to rank up to five barcodes by sugars, salt or kcal per 100 g, and check_allergens to see whether a product's listed allergens include ones the user wants to avoid. The data is crowd-sourced: always mention the data_quality_note and tell the user to check the physical label, and never describe an allergen check as a guarantee that a product is safe. If check_allergens returns unknown true, say the entry has no allergen or ingredient data. Credit Open Food Facts. Do not give dietary or medical advice. Open Food Facts has no recall data: say so when asked about a recall.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

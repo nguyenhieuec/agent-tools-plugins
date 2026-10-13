@@ -41,11 +41,12 @@ If the tools are missing, run `/mcp` and check that `emailpld` is connected.
 
 ## Tools
 
-- `engagement_report`: Build an email engagement report. Use this when the user pastes a Customer.io reporting webhook export, or a SendGrid or Mailgun event file, and wants a per-recipient engagement report or CSV.
+- `engagement_report`: Build an email engagement report. Use this when the user pastes an email event export (Customer.io reporting webhook, SendGrid or Mailgun events) and wants a per-recipient engagement report, a CSV or the events with no recipient.
 
 ## How to answer
 
-Use engagement_report when the user pastes an email platform event export and wants a per-recipient report, a CSV, or a list of events with no recipient. Send the raw NDJSON or JSON as events. Send recipients_csv and campaigns_csv when the user provides them. Change rules only when the user names a different window, machine-open rule, or bounce rule. Show the summary first, then say how many exceptions there are, and give the CSV when the user asked for a file. Do not claim the tool called Customer.io, SendGrid or Mailgun. It only reads the pasted export. Do not store the export.
+Use engagement_report when the user pastes an email platform event export and wants a per-recipient report, a CSV, or a list of events with no recipient. Send the raw NDJSON or JSON as events. Send recipients_csv and campaigns_csv when the user provides them. Change rules only when the user names a different window, machine-open rule, or bounce rule. Show the summary first, then say how many exceptions there are, and give the CSV when the user asked for a file. Do not claim the tool called Customer.io, SendGrid or Mailgun. It only reads the pasted export. Do not store the export. Use it only for the user's own sends; do not use it to track or profile one person beyond this send report.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

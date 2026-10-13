@@ -8,6 +8,9 @@
     },
     "lpcheck": {
       "url": "https://lpcheck.openkrill.app/mcp"
+    },
+    "cryptodd": {
+      "url": "https://cryptodd.openkrill.app/mcp"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "dev-security",
   "displayName": "Developer and Security Checks",
-  "description": "Package health, CVE triage, software end-of-life and licence facts, and AI coding agent news.",
+  "description": "Package health, CVE triage, software end-of-life and licence facts, DESIGN.md lint and diff, and AI coding agent news.",
   "author": {
     "name": "Agent Tools",
     "email": "support@openkrill.app",
@@ -17,6 +17,7 @@
     "pypi",
     "licenses",
     "end-of-life",
+    "design-md",
     "developer-tools"
   ]
 }

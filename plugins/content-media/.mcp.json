@@ -24,6 +24,14 @@
       "type": "http",
       "url": "https://taste.openkrill.app/mcp"
     },
+    "trending": {
+      "type": "http",
+      "url": "https://trending.openkrill.app/mcp"
+    },
+    "post-stats": {
+      "type": "http",
+      "url": "https://poststats.openkrill.app/mcp"
+    },
     "openkrill-api": {
       "type": "http",
       "url": "https://api.openkrill.app/mcp"

@@ -1,7 +1,7 @@
 {
   "name": "office",
   "displayName": "Office and Admin Tools",
-  "description": "Business days and holidays, US tax figures, EU VAT and company registries, document files, ready-to-send links and weekly lane plans.",
+  "description": "Business days and holidays, US tax figures, EU VAT and company registries, document files, ready-to-send links, weekly lane plans and an AI-native team scorecard.",
   "author": {
     "name": "Agent Tools",
     "email": "support@openkrill.app",
@@ -16,6 +16,7 @@
     "tax",
     "vat",
     "calendar",
-    "productivity"
+    "productivity",
+    "ai-adoption"
   ]
 }

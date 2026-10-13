@@ -1,12 +1,12 @@
 ---
 name: lpcheck
-description: "Read a liquidity pool's volume, TVL and fee APR over 1 and 7 days, and spot a short APR spike. Use when the user asks things like \"What are the 1-day and 7-day volume and fee APR for WETH and USDC on Ethereum?\" or \"Which pools on Base have recent volume and a fee of at least 0.3 percent?\"."
+description: "Read a liquidity pool's volume, TVL and fee APR over 1 and 7 days, and spot a short APR spike. Use when the user asks things like \"Compare the fee tiers of the WETH and USDC pools on Ethereum: 1-day and 7-day volume and fee APR for each.\" or \"Which pools on Base have recent volume and a fee of at least 0.3 percent?\"."
 license: MIT
 ---
 
 # LP Pool Check
 
-Read a liquidity pool's volume, TVL, and fee APR over 1-day and 7-day windows, and see whether a high APR looks like ongoing trading or a short spike.
+Read a liquidity pool's trading volume, TVL (total value locked) and fee APR over 1-day and 7-day windows. See whether a high APR comes from steady trading or a short spike, with the reason.
 
 The tools come from the `lpcheck` MCP server, bundled with the `markets` plugin.
 In Claude Code they are named `mcp__plugin_markets_lpcheck__<tool>`, for example `mcp__plugin_markets_lpcheck__check_pool`.
@@ -31,7 +31,7 @@ If the tools are missing, run `/mcp` and check that `lpcheck` is connected.
 
 ## Examples
 
-- "What are the 1-day and 7-day volume and fee APR for WETH and USDC on Ethereum?"
+- "Compare the fee tiers of the WETH and USDC pools on Ethereum: 1-day and 7-day volume and fee APR for each."
 - "Which pools on Base have recent volume and a fee of at least 0.3 percent?"
 - "If fees are 40 percent APR and price moves from 2000 to 2400 over 14 days, do fees cover impermanent loss?"
 - "What are the 1-day and 7-day volume and fee APR for WETH and USDC on Ethereum?" calls `check_pool`.
@@ -48,13 +48,14 @@ If the tools are missing, run `/mcp` and check that `lpcheck` is connected.
 
 ## Tools
 
-- `check_pool`: Check one liquidity pool. Use this when the user asks about one liquidity pool, such as "volume and fee APR for WETH and USDC on Ethereum" or "is this pool APR a spike?".
+- `check_pool`: Check one liquidity pool. Use this when the user asks about one real liquidity pool, such as "volume and fee APR for WETH and USDC on Ethereum" or "is this pool APR a spike?".
 - `find_active_pools`: Find pools with volume and fees. Use this when the user wants pools across chains or DEXes with recent volume and a fee rate, such as "high fee pools on Base with real volume".
-- `estimate_lp`: Estimate fees versus impermanent loss. Use this when the user gives a price range or a later price, a holding period, and a fee APR, and wants to know whether fees cover impermanent loss, gas, and exit cost.
+- `estimate_lp`: Estimate fees versus impermanent loss. Use this when the user gives numbers for a what-if and wants to know whether swap fees cover impermanent loss, gas, and exit cost.
 
 ## How to answer
 
-Use these tools to read public liquidity-pool figures. Call check_pool for one pool (a DefiLlama pool id, or a chain plus two token symbols or token addresses). Call find_active_pools to scan chains for pools with recent volume and a fee rate. Call estimate_lp when the user gives a price range or a later price, a holding period, and a fee APR, and wants the fee-versus-impermanent-loss arithmetic. Always show the APR flag and its reason, the risk checklist warnings, the as_of time, and the not-financial-advice notice. A pool contract address is not in the open index: if status is needs_tokens, ask for the two token addresses or a pool id, and do not invent a match. status unavailable means a source did not answer: say so and do not fill in numbers. apr_flag unconfirmed means the 7-day comparison is missing: do not call it real trading. position_type and risk warnings are labels and readings, not advice to enter or leave a position. Do not recommend buying, selling, or providing liquidity. Do not claim fees will be earned. Credit DefiLlama and, when token flags are present, GoPlus.
+Use these tools to read public liquidity-pool figures. Call check_pool for one real pool: a DefiLlama pool id, or chain plus token_a and token_b (symbols or token addresses). Call find_active_pools to scan chains for pools with recent volume and a fee rate. Call estimate_lp for a pure what-if with no pool: a price range or later price, a holding period, and a fee APR. Always show the APR flag and its reason, the risk checklist warnings, the as_of time, and the not-financial-advice notice. Every answer has a message that says what to pass next when the call did not find one pool. Follow it. status needs_tokens: a pool contract address is not in the open index, so ask for the two token addresses or a pool id, and do not invent a match. status ambiguous: several pools match, listed in other_tiers. Show them, or call check_pool again with one pool_id from other_tiers. status not_found: the pair, id, or chain is not in the index. Say so and ask for another chain or the token addresses. status unavailable: a source did not answer. Say so, do not fill in numbers, and try again later. apr_flag unconfirmed means the 7-day comparison is missing: do not call it real trading. find_active_pools ranks by 1-day fee APR, so a small pool with a one-day spike can come first. Check tvl_usd and apr_flag before you lead with a pool. position_type and risk warnings are labels and readings, not advice to enter or leave a position. Not financial advice: do not recommend buying, selling, or providing liquidity, and do not claim fees will be earned. Credit DefiLlama and, when token flags are present, GoPlus.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

@@ -6,7 +6,7 @@ license: MIT
 
 # Dev Facts Check
 
-Check the facts a developer asks for again and again: when a software version reaches end of life, what an open-source license is, whether a web feature works in a browser and what an RFC says about itself.
+Check the facts a developer asks for again and again: when a software version reaches end of life, whether the runtimes a repository pins are still supported, what an open-source license is, whether a web feature works in a browser, what an RFC says about itself and what changed between two versions of a package.
 
 The tools come from the `dev-facts` MCP server, bundled with the `dev-security` plugin.
 In Claude Code they are named `mcp__plugin_dev-security_dev-facts__<tool>`, for example `mcp__plugin_dev-security_dev-facts__get_eol_status`.
@@ -17,9 +17,11 @@ If the tools are missing, run `/mcp` and check that `dev-facts` is connected.
 
 - Shows whether a version of a product has reached end of life, with its end-of-life and LTS dates
 - Lists the release cycles of a product that are still supported, newest first, with the latest patch
+- Reads the runtime pins in a repo (Node.js, Python, Go, Ruby, PHP, .NET, Docker images) and flags any past end of life
 - Looks up an SPDX license by identifier or name: OSI approved, FSF free, deprecated or not
 - Shows the first release of each major browser that supports a web feature, and its Baseline status
 - Looks up an RFC by number or title words: status, abstract, and the RFCs that obsolete or update it
+- Lists the GitHub release notes of an npm or PyPI package between 2 versions and flags breaking changes
 - Names the source and the date of its data in every answer
 
 ## Examples
@@ -28,9 +30,9 @@ If the tools are missing, run `/mcp` and check that `dev-facts` is connected.
 - "Is the MIT license OSI approved?"
 - "Can I use CSS container queries in Safari?"
 - "Is Node.js 20 still supported and when does it reach end of life?" calls `get_eol_status`.
-- "What is the latest Python release and which versions get security fixes?" calls `get_eol_status`.
+- "What changed in express between 4.18.2 and 4.21.2? Anything breaking?" calls `get_release_notes`.
 - "Is the MIT license OSI approved and what is its SPDX id?" calls `check_license`.
-- "Can I use CSS container queries in Safari? Is it Baseline?" calls `check_browser_support`.
+- "Are the runtimes in my repo still supported? package.json has 'engines'." calls `check_runtime_eol`.
 - "Which RFC obsoletes RFC 2616?" calls `lookup_rfc`.
 
 ## When not to use
@@ -42,13 +44,16 @@ If the tools are missing, run `/mcp` and check that `dev-facts` is connected.
 ## Tools
 
 - `get_eol_status`: Get end-of-life status. Use this when the user asks whether a software version is still supported or when it reaches end of life, such as "is Node.js 20 still supported?" or "which Python versions get security fixes?".
+- `check_runtime_eol`: Check runtime end of life. Use this when you work in a repository and have its runtime pin files open, or the user asks whether a project's runtimes are still supported, such as "is anything in this repo past end of life?" or "is the Node version in our Dockerfile still supported?".
 - `check_license`: Check a license. Use this when the user asks about an open-source license, such as "is the MIT license OSI approved?" or "what is the SPDX id of Apache License 2.0?".
 - `check_browser_support`: Check browser support. Use this when the user asks whether a web platform feature works in browsers, such as "can I use CSS container queries in Safari?" or "is subgrid Baseline?".
 - `lookup_rfc`: Look up an RFC. Use this when the user asks about an RFC, such as "which RFC obsoletes RFC 2616?" or "find the RFC about WebSocket".
+- `get_release_notes`: Get release notes. Use this when the user asks what changed between two versions of a package, or what to watch for in an upgrade, such as "what changed in express between 4.18.2 and 5.1.0?" or "are there breaking changes from requests 2.28 to 2.32?".
 
 ## How to answer
 
-Use these tools for developer reference facts: get_eol_status for support and end-of-life dates of a software product or version, check_license for an SPDX license's identifier and OSI or FSF status, check_browser_support for Baseline status and browser versions of a web platform feature, and lookup_rfc for an RFC by number or by words in its title. Pass one product, license, feature or RFC per call. When a result has status not_found, ambiguous or version_not_found, read error.hint and the candidates, then call again with one of them instead of guessing. Always give the source and asOf date with the answer. endoflife.date is community maintained: say so when the answer drives a decision. A license answer is not legal advice and says nothing about what a license permits. Do not use these tools for package vulnerabilities or package health: say this plugin does not cover them.
+Use these tools for developer reference facts: get_eol_status for support and end-of-life dates of a software product or version, check_runtime_eol for the runtime versions a repository pins when you have its files open (package.json, .nvmrc, .python-version, pyproject.toml, go.mod, Dockerfile, .tool-versions and similar), check_license for an SPDX license's identifier and OSI or FSF status, check_browser_support for Baseline status and browser versions of a web platform feature, lookup_rfc for an RFC by number or by words in its title, and get_release_notes for what changed in a package or GitHub repository between the version the user has and a newer one. Pass one product, license, feature or RFC per call; check_runtime_eol takes all the pin files of a repository in one call, with each file's name and contents, and a row with status unmatched names its reason: say which pin could not be checked instead of guessing its date. When get_release_notes returns complete false, say the notes are partial and give compareUrl. When a result has status not_found, ambiguous or version_not_found, read error.hint and the candidates, then call again with one of them instead of guessing. Always give the source and asOf date with the answer. endoflife.date is community maintained: say so when the answer drives a decision. A license answer is not legal advice and says nothing about what a license permits. Do not use these tools for package vulnerabilities or package health: say this plugin does not cover them.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

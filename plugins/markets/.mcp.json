@@ -11,6 +11,10 @@
     "lpcheck": {
       "type": "http",
       "url": "https://lpcheck.openkrill.app/mcp"
+    },
+    "cryptodd": {
+      "type": "http",
+      "url": "https://cryptodd.openkrill.app/mcp"
     }
   }
 }

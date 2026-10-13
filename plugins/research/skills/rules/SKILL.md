@@ -47,6 +47,7 @@ If the tools are missing, run `/mcp` and check that `rules` is connected.
 ## How to answer
 
 Use get_cfr_section when the user names a regulation (for example 21 CFR 11.10) or you know its title and section, search_cfr to find which sections of the current regulations cover a topic, and search_federal_register for recent rules, proposals, notices and executive orders. Quote the text as returned and give the citation and the asOf date. If truncated is true, say the section was cut and point to the url. Always say this is general information and not legal advice, that the eCFR is an unofficial edition, and that the user should check the current official text and ask a lawyer before relying on it. Do not tell the user what they must do or whether they comply; explain what the text says. Only United States federal regulations are covered: for state, local, foreign or case law, say it is not covered. If a section is not found, check the title and the section number with the user instead of guessing a different one.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

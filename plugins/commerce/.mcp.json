@@ -16,6 +16,10 @@
       "type": "http",
       "url": "https://shopduty.openkrill.app/mcp"
     },
+    "certpacket": {
+      "type": "http",
+      "url": "https://certpacket.openkrill.app/mcp"
+    },
     "ad-angle": {
       "type": "http",
       "url": "https://adangle.openkrill.app/mcp"

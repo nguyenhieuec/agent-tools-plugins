@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "content-media",
   "displayName": "Content and Media Tools",
-  "description": "Post and video script drafts, AI-writing checks, transcripts, free video, Live Photos, design taste, plus YouTube transcripts, app reviews and X posts.",
+  "description": "Trending topics and post ideas, post and video script drafts, AI-writing checks, transcripts, free video, Live Photos, design taste, public views and likes of posts, plus YouTube transcripts, app reviews and X posts.",
   "author": {
     "name": "Agent Tools",
     "email": "support@openkrill.app",
@@ -17,7 +17,8 @@
     "transcripts",
     "youtube",
     "video",
-    "copywriting"
+    "copywriting",
+    "post-analytics"
   ],
   "skills": [
     "./skills/"

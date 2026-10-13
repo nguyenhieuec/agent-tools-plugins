@@ -1,12 +1,12 @@
 ---
 name: send-out
-description: "Turn assistant output into ready-to-send action links and files, with no sign-in. Use when the user asks things like \"Draft an email to the project team about status updates\" or \"Make a calendar event for Sprint Review next Monday at 10am\"."
+description: "Turn assistant output into ready-to-send action links and files, with no sign-in. Use when the user asks things like \"Draft an email to the project team about status updates\" or \"Make a calendar event for Sprint Review next Monday at 10am New York time\"."
 license: MIT
 ---
 
 # Send Out
 
-Turn assistant output into ready-to-send action links and files with zero sign-in and zero data custody liability.
+Turn assistant output into ready-to-send drafts with no sign-in. You open each draft in your own app, check it and press send yourself.
 
 The tools come from the `send-out` MCP server, bundled with the `office` plugin.
 In Claude Code they are named `mcp__plugin_office_send-out__<tool>`, for example `mcp__plugin_office_send-out__draft_email`.
@@ -18,16 +18,17 @@ If the tools are missing, run `/mcp` and check that `send-out` is connected.
 - Creates mailto draft links and RFC 822 .eml files ready to open in email clients
 - Creates Google Calendar links and RFC 5545 .ics calendar files with reminders
 - Creates WhatsApp wa.me click-to-chat links with normalized phone numbers
-- Creates Obsidian obsidian://new deep links and Markdown notes
+- Creates Obsidian obsidian://new links that open Obsidian with the note filled in
 - Creates X post share links checked against character limits
 - Generates Markdown files with structured YAML frontmatter
-- Stateless and keyless with zero data storage and zero server-side sending
+- Stages one file behind a temporary download link that expires in 1 to 168 hours
+- Never sends a message from the server: you review and send every draft
 
 ## Examples
 
 - "Draft an email to the project team about status updates"
-- "Make a calendar event for Sprint Review next Monday at 10am"
-- "Create a WhatsApp link with a customer support follow-up message"
+- "Make a calendar event for Sprint Review next Monday at 10am New York time"
+- "Save these meeting notes as a note in my Obsidian vault"
 - "Draft an email to alex@example.com with subject 'Project Milestone' saying 'Phase 1 is complete and ready for review.'." calls `draft_email`.
 - "Create a calendar event for 'Product Launch' on 2026-11-15T14:00 with duration 60 minutes in Europe/London." calls `create_calendar_event`.
 - "Create a WhatsApp link for phone '+1 (555) 234-5678' with message 'Your appointment is confirmed for Tuesday at 3pm.'." calls `create_whatsapp_link`.
@@ -42,17 +43,18 @@ If the tools are missing, run `/mcp` and check that `send-out` is connected.
 
 ## Tools
 
-- `draft_email`: Draft email. Creates a mailto draft link and an RFC 822 .eml file.
-- `create_calendar_event`: Create calendar event. Creates a Google Calendar web intent link and an RFC 5545 .ics calendar file.
-- `create_whatsapp_link`: Create WhatsApp link. Creates an official WhatsApp click-to-chat (wa.me) link.
-- `create_obsidian_note`: Create Obsidian note. Creates an obsidian://new URI and formatted Markdown text.
-- `create_x_post`: Create X post. Creates an official X (Twitter) web share intent link.
-- `create_markdown_file`: Create Markdown document. Creates a standard Markdown document with structured YAML frontmatter.
-- `prepare_transfer`: Prepare file transfer. Prepares an interactive file transfer card and secure download link for any text or document export.
+- `draft_email`: Draft email. Drafts one email the user sends themselves.
+- `create_calendar_event`: Create calendar event. Builds one calendar event the user adds themselves.
+- `create_whatsapp_link`: Create WhatsApp link. Makes a WhatsApp click-to-chat (wa.me) link.
+- `create_obsidian_note`: Create Obsidian note. Makes an Obsidian note link.
+- `create_x_post`: Create X post. Makes an X (Twitter) share link.
+- `create_markdown_file`: Create Markdown document. Makes one standalone Markdown (.md) file with YAML front matter.
+- `prepare_transfer`: Prepare file transfer. Stores one text file behind a temporary download link and shows a transfer card.
 
 ## How to answer
 
-Use Send Out when the user wants to take generated content and send or export it to an external destination. Use draft_email when the user wants an email draft or .eml file. Use create_calendar_event when the user wants to schedule an event or download an .ics calendar file. Use create_whatsapp_link when the user wants to send a WhatsApp message. Use create_obsidian_note when the user wants to save or export a note to Obsidian. Use create_x_post when the user wants to compose or share a post on X. Use create_markdown_file when the user wants a clean standalone Markdown document with metadata. Use prepare_transfer when the user or an agent wants to stage a file transfer, create a temporary download link, or view the interactive transfer card. Always present the returned action link as a clickable markdown link and show the file content or summary. Remind the user that Send Out creates client-side drafts only: it does not send messages directly from the server, and human review is required before dispatch. Send Out does not support Instagram direct messages, LinkedIn messaging, or automated email blasting.
+Use Send Out when the user wants to send or export generated content. Each tool returns a link or file text the user opens and sends themselves. Use draft_email for an email draft or .eml file. Use create_calendar_event for a meeting, invite or .ics file. Use create_whatsapp_link for a WhatsApp message. Use create_obsidian_note to save a note into Obsidian. Use create_x_post to compose a post on X. Use create_markdown_file for a plain .md file when the user does not use Obsidian. Use prepare_transfer only when the user wants a hosted download link: send file_name and content to stage a file, or only transfer_id to inspect one. The other tools already return the file text, so do not call prepare_transfer just to show a file. Always show the returned link as a clickable markdown link and show the file content or a summary. Tell the user that nothing is sent by the server and that they must review the draft before they send it. Send Out does not support Instagram messages, LinkedIn messages, SMS, or bulk or automated email. For those, say so plainly and offer an email draft or a copyable text instead.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

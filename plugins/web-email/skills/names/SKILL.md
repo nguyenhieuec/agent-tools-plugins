@@ -45,6 +45,7 @@ If the tools are missing, run `/mcp` and check that `names` is connected.
 ## How to answer
 
 Use check_domain_availability when the user asks whether a domain, startup name or business name is available or taken. Pass names as the user wrote them, or full domains such as acme.com to check only that domain; set tlds when the user wants specific endings ("a .com" means tlds ["com"]). When asked to find an available domain, brainstorm up to five candidate names and check them together. Always say the result is indicative and not a reservation, and that trademarks were not checked. Give the source and asOf date. When registrationCost is present, state that cost and that it is not a charge. A status of unsupported means the ending has no public registration data; unavailable means the lookup did not answer, so say the result is unknown. Never guess who owns a domain, and never offer to register, buy or reserve one.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

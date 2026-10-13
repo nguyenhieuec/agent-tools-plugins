@@ -40,14 +40,15 @@ If the tools are missing, run `/mcp` and check that `shop-duty` is connected.
 
 ## Tools
 
-- `eu_duty_estimate`: Estimate EU duty on a low-value consignment. Estimate the EU customs duty on a consignment of up to EUR 150 imported under IOSS or by post: EUR 3 per item from 1 July 2026 until 1 July 2028 (Council Regulation (EU) 2026/382, Delegated Regulation (EU) 2026/1022).
-- `customs_data_gap_check`: Check a Shopify CSV for customs data gaps. Check the text of a Shopify Inventory CSV (it holds HS Code and COO, country of origin) or product CSV for missing or malformed HS codes, countries of origin, item identifiers (SKU or barcode) and invalid barcodes.
-- `bulk_hs_candidates`: Find candidate tariff codes for products. Suggest candidate tariff (HS) codes for up to 20 product titles from the UK Trade Tariff and, if asked, the US Harmonized Tariff Schedule.
-- `landed_cost_estimate`: Estimate duty, VAT and landed cost. Estimate the duty, VAT and total landed cost of an item shipped to the UK, US or EU from a tariff line.
+- `eu_duty_estimate`: Estimate EU duty on a low-value consignment. Best for: the EUR 3 per item EU customs duty on a consignment of up to EUR 150 imported under IOSS or by post, from 1 July 2026 until 1 July 2028 (Council Regulation (EU) 2026/382, Delegated Regulation (EU) 2026/1022).
+- `customs_data_gap_check`: Check a Shopify CSV for customs data gaps. Best for: "which products have no HS code?" or "is my export ready for customs?".
+- `bulk_hs_candidates`: Find candidate tariff codes for products. Best for: "what HS code could this product use?" for up to 20 product titles, from the UK Trade Tariff and, if asked, the US Harmonized Tariff Schedule.
+- `landed_cost_estimate`: Estimate duty, VAT and landed cost. Best for: "what will import duty and VAT be on this?" for one item shipped to the UK or US from a known tariff line.
 
 ## How to answer
 
 Use eu_duty_estimate for the EUR 3 per item EU duty on consignments up to EUR 150 (channel ioss or postal); pass order lines with description, origin, qty, unit_value_eur and optionally hs_code, never customer details. Report the duty for the lines as given and mention the lower grouped figure when it differs. Use customs_data_gap_check with the text of a Shopify Inventory CSV (it holds HS Code and COO) or product CSV; a null count means the file has no column for that check. Use bulk_hs_candidates for candidate tariff codes and landed_cost_estimate for duty, VAT and total. For a US landed cost, pass origin and transport (ocean, air or other). Report each chapter 99 line and each skipped heading, and the processing and harbor fees. If complete is false, say what missing lists; do not treat that total as complete. Always call a tariff code a candidate, not binding, and cite the sources and legal_basis returned. If a result says a rate is not a plain percentage or an amount is null, say it was not calculated rather than guessing.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

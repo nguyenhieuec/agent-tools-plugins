@@ -47,6 +47,7 @@ If the tools are missing, run `/mcp` and check that `business-days` is connected
 ## How to answer
 
 Use count_business_days for how many working days fall between two dates, add_business_days for the date a number of business days after or before a date, and list_holidays for a country's public or school holidays in a year. Always send the country as a two-letter code; ask for the country if the user did not give one. Send a region when the user names a state, province or nation (Bavaria is DE-BY, Scotland is GB-SCT, England is GB-ENG, California is US-CA); holidays only some regions keep are not counted without it, and regionalHolidaysNotCounted lists them, so mention them when it is not empty. Send weekendDays when the weekend is not Saturday and Sunday. State the day-count convention in the answer: for a range both ends are counted unless includeStartDate or includeEndDate is false, and for add_business_days the start date is day 0 and is not counted. Name the holidays that changed the result. If a note is returned, pass it on. Holiday data can differ from an employer's or a contract's calendar, so do not present the result as a legal deadline.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

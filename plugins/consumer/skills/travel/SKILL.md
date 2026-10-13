@@ -42,13 +42,14 @@ If the tools are missing, run `/mcp` and check that `travel` is connected.
 
 ## Tools
 
-- `get_travel_advice`: Get travel advice. Use this when the user asks about travel advice, safety warnings, or entry requirements for a country, such as "is it safe to travel to Thailand?" or "what are the entry requirements for Japan?".
-- `get_airport_status`: Get airport status. Use this when the user asks about delays, closures or weather at an airport, such as "is JFK delayed?" or "what is the weather at Heathrow?".
-- `compare_advisories`: Compare travel advisories. Use this when the user wants the advice for several countries side by side, such as "compare Mexico, Colombia and Peru" or "which of these countries has the highest advisory level?".
+- `get_travel_advice`: Get travel advice. Use this when the user asks about the official travel advice, safety warnings or entry requirements for one country, such as "is it safe to travel to Thailand?" or "what are the entry requirements for Japan?".
+- `get_airport_status`: Get airport status. Use this when the user asks about airport delays, closures or weather right now, such as "is JFK delayed?" or "what is the weather at Heathrow?".
+- `compare_advisories`: Compare travel advisories. Use this when the user wants to compare the travel advice for several countries side by side, such as "compare Mexico, Colombia and Peru" or "which of these countries has the highest advisory level?".
 
 ## How to answer
 
-Use these tools for questions about official government travel advice for a country and about current airport conditions. For one country, call get_travel_advice with the country name or ISO code; set section to entry-requirements, safety or health when the user asks about one of those. For several countries, call compare_advisories with up to five. For an airport, call get_airport_status with its IATA or ICAO code. Always give the user the dates and the source links, and say that UK advice is written for British citizens and US advice for US citizens, so entry rules for other passports can differ. Do not claim a country is safe or unsafe in your own words: quote the advisory level or alert as the government states it. Do not give visa, medical or legal advice, and do not present airport weather as a flight-planning source. FAA delay information covers US airports only.
+Use these tools for questions about official government travel advice for a country and about current airport conditions. For one country, call get_travel_advice with the country name or ISO code; set section to entry-requirements, safety or health when the user asks about one of those. For several countries, call compare_advisories with up to five. For an airport, call get_airport_status with its IATA or ICAO code. Always give the user the dates and the source links, and say that UK advice is written for British citizens and US advice for US citizens, so entry rules for other passports can differ. Do not claim a country is safe or unsafe in your own words: quote the advisory level or alert as the government states it. Do not give visa, medical or legal advice, and do not present airport weather as a flight-planning source. If a result is ambiguous, ask the user which of the candidates they mean and call again; in compare_advisories check each country's own status. If the UK or US half is none or unavailable, report the other half and the official link, and do not guess. FAA delay information covers US airports only, and no tool looks up a flight by number.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

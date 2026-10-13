@@ -18,6 +18,12 @@
     "taste": {
       "url": "https://taste.openkrill.app/mcp"
     },
+    "trending": {
+      "url": "https://trending.openkrill.app/mcp"
+    },
+    "post-stats": {
+      "url": "https://poststats.openkrill.app/mcp"
+    },
     "openkrill-api": {
       "url": "https://api.openkrill.app/mcp"
     }

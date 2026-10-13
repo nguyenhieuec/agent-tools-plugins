@@ -1,6 +1,6 @@
 # Office and Admin Tools
 
-Business days and holidays, US tax figures, EU VAT and company registries, document files, ready-to-send links and weekly lane plans.
+Business days and holidays, US tax figures, EU VAT and company registries, document files, ready-to-send links, weekly lane plans and an AI-native team scorecard.
 
 ```bash
 claude plugin install office@openkrill
@@ -14,6 +14,7 @@ claude plugin install office@openkrill
 | `docs` | Document Tools | `https://docs.openkrill.app/mcp` |
 | `send-out` | Send Out | `https://sendout.openkrill.app/mcp` |
 | `lane-planner` | Lane Planner | `https://lanes.openkrill.app/mcp` |
+| `tenrung` | Tenrung | `https://tenrung.openkrill.app/mcp` |
 
 Every server is public, read-only and needs no key.
 Generated from the Agent Tools plugin listings; edits made here are overwritten.

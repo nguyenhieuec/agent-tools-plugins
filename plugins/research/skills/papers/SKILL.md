@@ -48,6 +48,7 @@ If the tools are missing, run `/mcp` and check that `papers` is connected.
 ## How to answer
 
 Use these tools to find research papers and their free full texts. search_papers asks Europe PMC and Crossref about a topic and merges the answers; search_arxiv searches arXiv preprints; get_paper returns one paper's abstract from a DOI, PubMed id or arXiv id. Pass topic words, not a full question. Use from_year for recent work and open_access_only when the user wants papers they can read for free. Report each paper's source and tell the user that openAccessUrl null means the index does not confirm a free copy, not that none exists. Read error.hint when a status is not ok and call again with a changed query instead of repeating the same call. These are records, not endorsements: never present a paper's claims as established fact or give medical advice from an abstract. Do not use these tools to check retractions or verify a reference list: say this plugin does not check them.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

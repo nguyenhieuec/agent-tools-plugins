@@ -9,8 +9,17 @@
     "dev-facts": {
       "url": "https://devfacts.openkrill.app/mcp"
     },
+    "design-md": {
+      "url": "https://designmd.openkrill.app/mcp"
+    },
     "industry-pulse": {
       "url": "https://pulse.openkrill.app/mcp"
+    },
+    "agent-trace": {
+      "url": "https://agenttrace.openkrill.app/mcp"
+    },
+    "injection-scan": {
+      "url": "https://injectionscan.openkrill.app/mcp"
     }
   }
 }

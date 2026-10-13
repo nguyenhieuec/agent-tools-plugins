@@ -14,22 +14,22 @@
     {
       "name": "dev-security",
       "source": "dev-security",
-      "description": "Package health, CVE triage, software end-of-life and licence facts, and AI coding agent news."
+      "description": "Package health, CVE triage, software end-of-life and licence facts, DESIGN.md lint and diff, and AI coding agent news."
     },
     {
       "name": "web-email",
       "source": "web-email",
-      "description": "Audit a site's SEO and AI crawler access, check a domain's mail delivery, see if a name's domain is free, and report email engagement."
+      "description": "Audit a site's SEO and AI crawler access, read a web page as clean Markdown, check a domain's mail delivery, see if a name's domain is free, and report email engagement."
     },
     {
       "name": "commerce",
       "source": "commerce",
-      "description": "Store price tracking, catalog and feed checks, HS codes, duty and landed cost, and competitor ad angles."
+      "description": "Store price tracking, catalog and feed checks, HS codes, duty and landed cost, US product-safety certificates, and competitor ad angles."
     },
     {
       "name": "office",
       "source": "office",
-      "description": "Business days and holidays, US tax figures, EU VAT and company registries, document files, ready-to-send links and weekly lane plans."
+      "description": "Business days and holidays, US tax figures, EU VAT and company registries, document files, ready-to-send links, weekly lane plans and an AI-native team scorecard."
     },
     {
       "name": "sales-hiring",
@@ -44,7 +44,7 @@
     {
       "name": "markets",
       "source": "markets",
-      "description": "Technical indicators over a price series, candlestick charts for a ticker, and liquidity pool fee and volume checks."
+      "description": "Technical indicators over a price series, candlestick charts for a ticker, liquidity pool fee and volume checks, and token red-flag screens."
     },
     {
       "name": "consumer",
@@ -54,7 +54,7 @@
     {
       "name": "content-media",
       "source": "content-media",
-      "description": "Post and video script drafts, AI-writing checks, transcripts, free video, Live Photos, design taste, plus YouTube transcripts, app reviews and X posts."
+      "description": "Trending topics and post ideas, post and video script drafts, AI-writing checks, transcripts, free video, Live Photos, design taste, public views and likes of posts, plus YouTube transcripts, app reviews and X posts."
     }
   ]
 }

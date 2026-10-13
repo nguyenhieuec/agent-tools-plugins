@@ -43,14 +43,15 @@ If the tools are missing, run `/mcp` and check that `company-jobs` is connected.
 
 ## Tools
 
-- `find_company_jobs`: Find company jobs and careers. Find open jobs at specific companies.
-- `rank_jobs_for_profile`: Rank company jobs for profile. Rank the open jobs at up to 3 companies for a person's profile.
-- `job_fit_brief`: Brief on one job and tailor resume. Get the facts of one job and a checklist for tailoring a resume to it.
-- `profile_keyword_check`: Check recruiter and LinkedIn profile keywords. Compare recruiter keywords and LinkedIn search words with profile text, headline, About or resume.
+- `find_company_jobs`: Find company jobs and careers. Best for: open jobs at named companies, such as "jobs at Stripe", "is Notion hiring designers?" or "remote backend jobs at Ramp and Linear".
+- `rank_jobs_for_profile`: Rank company jobs for profile. Best for: which open jobs at up to 3 companies suit the user, such as "which jobs at Ramp fit a senior backend engineer with 7 years of Go?".
+- `job_fit_brief`: Brief on one job and tailor resume. Best for: the facts of one posting, such as "what does the senior backend job at Stripe require?" or "how should I tailor my resume for this role?".
+- `profile_keyword_check`: Check recruiter and LinkedIn profile keywords. Best for: LinkedIn profile and resume keywords recruiters search.
 
 ## How to answer
 
 Use find_company_jobs when the user asks about open jobs, hiring or roles at specific companies. Pass company names as the user wrote them. When the user names a kind of company instead ("startups", "AI labs"), pick up to five well-known companies of that kind and say which ones you checked. Link each job's applyUrl. A not_found company publishes no board on Greenhouse, Lever, Ashby, Workable or SmartRecruiters; suggest its own careers page instead. When the user wants to know which jobs suit them, call rank_jobs_for_profile with the profile they gave you (target titles, recent titles, level, years, skills, locations); never invent profile details, ask for what is missing. Show each job's score with its whyFit and gaps and say the ranking is a rule-based match, not a hiring prediction. For one job, call job_fit_brief and turn its must-haves, level signals and tailoring checklist into advice in your own words; credit the checklist as general recruiter practice, not a guarantee. When the user wants to know whether their profile has the words recruiters search for, ask them to paste their own profile text (headline first) and call profile_keyword_check with it and either targetTitles or one company and job; never fetch a profile link and never invent profile text. Present which terms are present and missing, the example search string and the narrative tips, and say add only what is true. The tools return facts; you write any resume or profile text, and only from what the user told you. Do not look up or contact people at the company.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

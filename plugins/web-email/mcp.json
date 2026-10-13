@@ -6,6 +6,12 @@
     "seo-audit": {
       "url": "https://seoaudit.openkrill.app/mcp"
     },
+    "answer-share": {
+      "url": "https://answershare.openkrill.app/mcp"
+    },
+    "page-fetch": {
+      "url": "https://pagefetch.openkrill.app/mcp"
+    },
     "mailcheck": {
       "url": "https://mailcheck.openkrill.app/mcp"
     },

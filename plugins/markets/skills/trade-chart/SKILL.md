@@ -42,11 +42,12 @@ If the tools are missing, run `/mcp` and check that `trade-chart` is connected.
 
 ## Tools
 
-- `chart`: Price chart. Price chart: candlestick chart and indicators for a public ticker.
+- `chart`: Price chart. Candlestick price chart with indicators for a public ticker.
 
 ## How to answer
 
-Use the chart tool to show a candlestick price chart. Pass symbol, and timeframe and indicators when the user names them. Defaults are 1d, sma and rsi, dark. Report the read, the source and the asOf time, and give the user the openUrl or the html so they can open the chart. The html is a full page; do not rewrite it. This is informational only and not financial advice. Never say an indicator means buy, sell, overbought, oversold, bullish or bearish, never predict a price, and never suggest a trade or an order. If asked to buy, sell or connect a broker, say the plugin only draws a chart of public prices. If status is not ok, read error.hint and change the call instead of repeating it. Volume is always on the candle chart; do not ask for a separate volume tool.
+Use the chart tool to show a candlestick price chart. Pass symbol, and timeframe and indicators when the user names them. Defaults are 1d, sma and rsi, dark. An inline card shows the symbol, timeframe, last close, change and indicator readings, with a link to openUrl; do not repeat those numbers. Add the source, the asOf time and the notice. The html is the full chart page; pass it on unchanged or give the openUrl, and never rewrite it. This is informational only and not financial advice. Never say an indicator means buy, sell, overbought, oversold, bullish or bearish, never predict a price, and never suggest a trade or an order. If asked to buy, sell or connect a broker, say the plugin only draws a chart of public prices. If status is not ok, read error.hint and follow it instead of repeating the call. An unknown or misspelled symbol returns no_data. Volume is always on the candle chart; do not ask for a separate volume tool.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

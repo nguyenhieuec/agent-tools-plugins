@@ -40,14 +40,15 @@ If the tools are missing, run `/mcp` and check that `catalog-qa` is connected.
 
 ## Tools
 
-- `csv_import_preflight`: Check a product CSV before import. Check the text of a Shopify product CSV against the import rules before it is imported.
-- `merchant_feed_check`: Check products for Merchant Center rules. Check products against Google Merchant Center feed rules: missing or invalid GTIN barcodes, long, promotional or all-capital titles, missing descriptions, links, images and brand.
-- `listing_text_audit`: Audit product listing text. Audit the text of product listings: images without alt text, descriptions copied between products, descriptions that are too short and title problems.
-- `listing_fix_sheet`: Build a CSV of listing text fixes. Build a CSV of corrected titles and image alt text from a catalog, for the user to review and import.
+- `csv_import_preflight`: Check a product CSV before import. Best for: "will this Shopify CSV import?" or "what is wrong with my product file?".
+- `merchant_feed_check`: Check products for Merchant Center rules. Best for: "what would Google Merchant Center reject?" or "are my barcodes valid?".
+- `listing_text_audit`: Audit product listing text. Best for: "which products have no alt text?", "are any descriptions copied?" or "which descriptions are too thin?".
+- `listing_fix_sheet`: Build a CSV of listing text fixes. Best for: "write the alt text for my images" or "fix the shouting titles".
 
 ## How to answer
 
-Use csv_import_preflight with the text of a Shopify product CSV before an import: report blocking items first, then warnings, naming row and fix. Use merchant_feed_check and listing_text_audit with either csv (the file text) or domain (a store address), never both; domain reads the store's public product feed once and a large store may refuse it, in which case ask for the CSV. Use listing_fix_sheet to produce a CSV of corrections; it is advisory text for the user to review and import themselves, nothing is changed in the store. Counts in totals are before lists were cut; say so when truncated is true. Do not call a GTIN valid beyond its check digit.
+Nothing is stored: a file or feed is used for one answer and dropped, so pass the full text on every call. Use csv_import_preflight with the text of a Shopify product CSV before an import: report blocking items first, then warnings, naming row and fix. Use merchant_feed_check and listing_text_audit with either csv (the file text) or domain (a store address), never both; domain reads the store's public product feed once and a large store may refuse it, in which case ask for the CSV. Use listing_fix_sheet to produce a CSV of corrections; it is advisory text for the user to review and import themselves, nothing is changed in the store. Counts in totals are before lists were cut; say so when truncated is true. Do not call a GTIN valid beyond its check digit. When a store refuses its feed, ask the user to export the CSV from Shopify admin (Products > Export). A CSV over 2 MB is refused with csv_too_large: split it by rows, header row in each part.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

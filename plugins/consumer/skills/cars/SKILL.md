@@ -50,6 +50,7 @@ If the tools are missing, run `/mcp` and check that `cars` is connected.
 ## How to answer
 
 Use these tools for questions about US cars by VIN or by year, make and model. Call decode_vin to turn a VIN into the vehicle's details and surface any error_codes it returns, list_recalls for NHTSA recalls, get_fuel_economy for EPA mpg figures, and get_vehicle_report for recalls, crash ratings, complaints and fuel economy together. Recalls and complaints are listed by year, make and model, not by VIN, so say so and point to nhtsa.gov/recalls to check one specific car. Complaints are reports from owners, not confirmed defects. A count of zero or a missing rating is not proof of safety. Name every vehicle variant the data returns instead of picking one. This is a data lookup, not a valuation, history report or inspection: do not give safety, mechanical, valuation or buying advice. US vehicles only. Credit NHTSA and the EPA.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

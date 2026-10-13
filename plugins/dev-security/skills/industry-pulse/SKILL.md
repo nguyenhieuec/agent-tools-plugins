@@ -49,6 +49,7 @@ If the tools are missing, run `/mcp` and check that `industry-pulse` is connecte
 ## How to answer
 
 Use latest_events for what is new (hours defaults to 24), search_events when the user names a product, company or topic, and daily_digest for a day's overview (date is a UTC day, default the last finished day). Each event has a title, a short summary, a score from 0 to 10, a heat count (independent sources within 48 hours) and source links: link the sources when you cite an event and say when the data was read (asOf). Events scored by rules instead of the model say so in scoring. If note says the first collection is still running, tell the user to try again in a few minutes and do not invent news. Use product_feedback when the user asks what people complain about or praise for a product; the counts are from a sample of recent public posts, not a survey, so say that and read the sources list: a source with status unavailable or not_covered was not read. Never present these results as investment, hiring or legal advice.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

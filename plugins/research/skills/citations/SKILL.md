@@ -45,6 +45,7 @@ If the tools are missing, run `/mcp` and check that `citations` is connected.
 ## How to answer
 
 Use check_references when the user wants references, a bibliography, a citation or a DOI checked, or asks whether a paper was retracted. Send each reference as one string as the user wrote it, up to 10 per call; split longer lists into several calls. Report the verdict for every reference. found: a real record matches. mismatch: a real record exists but differences (doi, title, authors, year) say what the reference gets wrong, so show the real record's DOI, title, authors and year. not_found: nothing matches in Crossref or OpenAlex; say it may be invented or garbled, and that books, reports and web pages are often not indexed. unavailable: the lookup failed, suggest trying again. Always state a retraction.status of retracted, partially_retracted, expression_of_concern or corrected, with the notice dates; none_recorded means the source lists no notice, and not_checked means the source carries no retraction data. A year-only mismatch can come from a preprint or a later edition having another year. This checks bibliographic details only; do not claim it verified what a paper says.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

@@ -12,9 +12,21 @@
       "type": "http",
       "url": "https://devfacts.openkrill.app/mcp"
     },
+    "design-md": {
+      "type": "http",
+      "url": "https://designmd.openkrill.app/mcp"
+    },
     "industry-pulse": {
       "type": "http",
       "url": "https://pulse.openkrill.app/mcp"
+    },
+    "agent-trace": {
+      "type": "http",
+      "url": "https://agenttrace.openkrill.app/mcp"
+    },
+    "injection-scan": {
+      "type": "http",
+      "url": "https://injectionscan.openkrill.app/mcp"
     }
   }
 }

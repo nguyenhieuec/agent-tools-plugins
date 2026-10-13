@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "commerce",
   "displayName": "Store and Trade Tools",
-  "description": "Store price tracking, catalog and feed checks, HS codes, duty and landed cost, and competitor ad angles.",
+  "description": "Store price tracking, catalog and feed checks, HS codes, duty and landed cost, US product-safety certificates, and competitor ad angles.",
   "author": {
     "name": "Agent Tools",
     "email": "support@openkrill.app",

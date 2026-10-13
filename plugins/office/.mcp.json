@@ -23,6 +23,10 @@
     "lane-planner": {
       "type": "http",
       "url": "https://lanes.openkrill.app/mcp"
+    },
+    "tenrung": {
+      "type": "http",
+      "url": "https://tenrung.openkrill.app/mcp"
     }
   }
 }

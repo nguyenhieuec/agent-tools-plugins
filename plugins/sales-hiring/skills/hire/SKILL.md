@@ -39,11 +39,12 @@ If the tools are missing, run `/mcp` and check that `hire` is connected.
 
 ## Tools
 
-- `split_role`: Split a role into AI and human work. Use this when the user wants to split a job into work AI can do now, work AI should draft for approval, and work that needs a person, before hiring.
+- `split_role`: Split a role into AI and human work. Use this when the user wants to split a whole job into work AI can do now, work AI drafts for approval, and work that needs a person.
 
 ## How to answer
 
 Use split_role when the user wants to know which parts of a job AI can do, which it should only draft, and which need a person, or wants a job ad or a two-week trial for the human part. Pass the job title, or an O*NET-SOC code such as 15-1252.00. Pass a job description only when the title is vague, and never include a person's name, email, phone number or resume. Do not call it to judge a named candidate, to hire or fire someone, or to give trading, legal or pay advice. Read match.method and match.confidence. If status is no_match, say so and ask for a clearer title or a code; do not invent tasks. If status is personal_data, ask for the role without contact details. Quote the pile and the rule with each task you mention. Include the source attribution in the answer. Say it is a planning aid, not a decision about any person. If the human pile is empty, say not to hire for the listed tasks.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

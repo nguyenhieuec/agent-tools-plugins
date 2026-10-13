@@ -47,6 +47,7 @@ If the tools are missing, run `/mcp` and check that `live-card` is connected.
 ## How to answer
 
 Use render_live_card when the user wants an Apple Live Photo, a short animated card, or an MP4 or GIF made from a design. Write cover_html and motion_html yourself as complete, self-contained HTML. Inline every image as SVG or a data: URL. Do not use http, https, or protocol-relative URLs: those calls are refused. Keep each document under 60,000 characters. Default size is 1080 by 1440. Duration is at most 3000 milliseconds. Drive the animation with CSS animations or requestAnimationFrame over that duration. The renderer advances a virtual clock. Do not depend on wall-clock time or on assets loading from the network. After render_live_card returns status queued, call live_card_status with the same job_id until status is ready. Then give the user all four download links and say the JPEG and MOV share content_identifier and that the links expire at expires_at. The MP4 and GIF are the fallback for non-Apple players. If status is failed, read error_code and message and fix the HTML or tell the user the limit. A renderer_unavailable error means the renderer is off, not that the HTML was wrong. A livecard_network_limit or livecard_global_limit error means the daily cap is spent until 00:00 UTC. These tools only make files. They cannot import into Photos, read a camera roll, or fetch a web page.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

@@ -51,6 +51,7 @@ If the tools are missing, run `/mcp` and check that `ad-angle` is connected.
 ## How to answer
 
 Use these tools to research how competitors position a product, before any ad is made. For offer and price angles call map_store_offers with the store addresses the user named (at most three). For creative angles call map_ad_angles with the ads the user pasted in; do not invent ads and do not fetch an ad library. To check whether people discuss an angle in public call validate_angle_gaps with short phrases. To choose which ad to make for an audience call pick_ad_type with the product and the stage, or a short audience note when the stage is not known; if the stage is unclear, show both plays and ask which fits. Tell the user that an offer map is product-page copy and pricing, not ads, and that a store which refuses is unavailable rather than scraped. Gaps are leads from keyword matching, not proof that an angle works; say so, and cite the handles or ad ids and the counts. Never search Reddit. These tools do not create, upload or launch ads and do not touch any ad account.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

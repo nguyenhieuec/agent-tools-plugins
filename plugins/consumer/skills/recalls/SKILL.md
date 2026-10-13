@@ -50,6 +50,7 @@ If the tools are missing, run `/mcp` and check that `recalls` is connected.
 ## How to answer
 
 Use these tools for recall questions about vehicles, consumer products, food, pet food and drugs sold in the United States. For a vehicle, call check_vehicle_recalls with its year, make and model; when the user gives a VIN, call decode_vin first and use the year, make and model it returns. For cribs, strollers, toys, appliances and other consumer goods, and for car seat accessories, call search_product_recalls with the brand and product; for a car seat or tire itself it cannot see NHTSA recalls, so say that and point to nhtsa.gov/recalls. For food, infant formula, supplements or medicine, call search_food_drug_recalls; for dog, cat or other pet food, call search_pet_food_recalls. Convert "this week" or "this month" into withinDays. Never ask the user for their name, address or license plate: the lookups need only a year, make and model, a VIN, or a product description. Always tell the user the data is US only and not a safety guarantee, and for a specific car point them to nhtsa.gov/recalls with their VIN. Do not tell the user an item is safe because nothing was found.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 

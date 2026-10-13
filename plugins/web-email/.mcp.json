@@ -8,6 +8,14 @@
       "type": "http",
       "url": "https://seoaudit.openkrill.app/mcp"
     },
+    "answer-share": {
+      "type": "http",
+      "url": "https://answershare.openkrill.app/mcp"
+    },
+    "page-fetch": {
+      "type": "http",
+      "url": "https://pagefetch.openkrill.app/mcp"
+    },
     "mailcheck": {
       "type": "http",
       "url": "https://mailcheck.openkrill.app/mcp"

@@ -17,6 +17,9 @@
     },
     "lane-planner": {
       "url": "https://lanes.openkrill.app/mcp"
+    },
+    "tenrung": {
+      "url": "https://tenrung.openkrill.app/mcp"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "web-email",
   "displayName": "Site, SEO and Email Checks",
-  "description": "Audit a site's SEO and AI crawler access, check a domain's mail delivery, see if a name's domain is free, and report email engagement.",
+  "description": "Audit a site's SEO and AI crawler access, read a web page as clean Markdown, check a domain's mail delivery, see if a name's domain is free, and report email engagement.",
   "author": {
     "name": "Agent Tools",
     "email": "support@openkrill.app",
@@ -13,6 +13,7 @@
   "keywords": [
     "seo",
     "ai-crawlers",
+    "web-to-markdown",
     "email-deliverability",
     "dns",
     "domains"

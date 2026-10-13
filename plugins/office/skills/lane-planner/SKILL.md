@@ -1,12 +1,12 @@
 ---
 name: lane-planner
-description: "Lane Planner is a planning tool for people with many interests and limited hours. Use when the user asks things like \"I have 10 h a week for an iOS app, a Swift book, Figma, guitar and Japanese. Plan my week in lanes.\" or \"Here is my ticked plan from last week. Review it and plan the next 7 days.\"."
+description: "Turn a list of interests into a day-by-day plan for 3 to 7 days, with checkbox text for a todo app. Use when the user asks things like \"I have 10 h a week for an iOS app, a Swift book, Figma, guitar and Japanese. Plan my week in lanes.\" or \"Here is my ticked plan from last week. Review it and plan the next 7 days.\"."
 license: MIT
 ---
 
 # Lane Planner
 
-Lane Planner is a planning tool for people with many interests and limited hours. Ask "I have 10 hours a week for an iOS app, a Swift book, Figma, guitar and Japanese: plan my week" or "here is last week's list with what I ticked: plan the next one".
+Lane Planner turns a list of interests into a day-by-day plan for the next 3 to 7 days, plus checkbox text you can paste into any todo app. It is for people with many interests and limited hours. Ask "I have 10 hours a week for an iOS app, a Swift book, Figma, guitar and Japanese: plan my week" or "here is last week's list with what I ticked: plan the next one".
 
 The tools come from the `lane-planner` MCP server, bundled with the `office` plugin.
 In Claude Code they are named `mcp__plugin_office_lane-planner__<tool>`, for example `mcp__plugin_office_lane-planner__plan_lanes`.
@@ -41,12 +41,13 @@ If the tools are missing, run `/mcp` and check that `lane-planner` is connected.
 
 ## Tools
 
-- `plan_lanes`: Plan interests in lanes. Use this when the user has several interests, projects or hobbies and asks for a plan for the next days or week, for example "I have 10 hours a week for an app, a book, guitar and Japanese: plan my week".
-- `review_week`: Review a week and re-plan. Use this when the user comes back after a lane plan and says what got done, for example "here is my list with what I ticked, plan next week".
+- `plan_lanes`: Plan interests in lanes. Use this for a first plan: the user lists several interests, projects or hobbies and asks for a plan for the next days or week, such as "10 hours a week for an app, a book, guitar and Japanese: plan my week".
+- `review_week`: Review a week and re-plan. Use this when a plan from plan_lanes has ended and the user says what got done, such as "here is my list with what I ticked, plan next week".
 
 ## How to answer
 
-Use plan_lanes when the user lists several interests, projects or hobbies and wants a plan for the coming days. Send every interest with a few words of note, the weekly hours, and the user's local date as start_date. Send next_steps for the build interest when the user named concrete steps. Set lane only when the user chose one. Show the four lanes, the spine sentence and the day plan, and give todo_text word for word, header lines and #ids included, so the user can paste it into a todo app and review_week can read it back. Ask whether the spine sentence fits; send spine with their words to replace it. Use review_week after the plan's last day: send the pasted plan text with [x] on finished lines as checklist, or send lanes with done and not_done titles. When the user only says in words what got done, plan_lanes with done, not_done and each interest's lane does the same review. Tell the user what got done, the changes, and the new todo_text. It is a planning tool; do not describe it as a treatment for anything.
+Use plan_lanes when the user lists several interests, projects or hobbies and wants a plan for the coming days. Send every interest with a few words of note, the weekly hours, and the user's local date as start_date. Send next_steps for the build interest when the user named concrete steps. Set lane only when the user chose one. Show the four lanes, the spine sentence and the day plan, and give todo_text word for word, header lines and #ids included, so the user can paste it into a todo app and review_week can read it back. Ask whether the spine sentence fits; send spine with their words to replace it. Use review_week after the plan's last day for any plan that is in this chat: send the pasted plan text with [x] on finished lines as checklist, or lanes with done, not_done and hours_per_week. Use plan_lanes with done and not_done only when the earlier plan is not in this chat and the user retells the week in words; set each interest's lane to its lane last week. Tell the user what got done, the changes, and the new todo_text. It is a planning tool; do not describe it as a treatment for anything.
+If no tool here fits the task, say so; `index_tools` on the Agent Tools API server (https://api.openkrill.app/mcp) finds another server by task.
 
 ## Limits
 
